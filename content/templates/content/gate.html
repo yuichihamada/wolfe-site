@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}アクセスゲート{% endblock %}
+{% block content %}
+<section class="max-w-md mx-auto px-4 py-16">
+  <h1 class="text-2xl font-semibold mb-6">メンバー専用サイト</h1>
+
+  {% if messages %}
+    <ul class="mb-4">
+      {% for m in messages %}
+        <li class="text-red-600 text-sm">{{ m }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <form method="post" class="bg-white border rounded p-6 space-y-4">
+    {% csrf_token %}
+    <label class="block">
+      <span class="text-sm text-gray-700">パスワード</span>
+      <input type="password" name="password" required
+             class="mt-1 w-full border rounded px-3 py-2" placeholder="••••••••" autofocus>
+    </label>
+
+    <label class="inline-flex items-center gap-2 text-sm text-gray-700">
+      <input type="checkbox" name="remember" value="1" class="border rounded">
+      この端末で記憶する（24時間）
+    </label>
+
+    <button class="w-full bg-black text-white py-2 rounded">入室</button>
+  </form>
+
+  <p class="text-xs text-gray-500 mt-4">
+    このページのURLとパスワードはメンバーのみに共有してください。
+  </p>
+</section>
+{% endblock %}

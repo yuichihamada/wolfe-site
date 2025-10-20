@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Wolfe Education{% endblock %}</title>
+  <meta name="description" content="Wolfe 教育・研修サイト">
+  <link rel="icon" href="data:,">
+  <!-- Tailwind (CDN) - MVP用。必要なら後でPostCSS運用へ移行 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+  {% comment %} <header class="bg-white border-b">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="font-semibold text-lg">Wolfe Education</a>
+      <nav class="flex gap-4 text-sm">
+        <a href="/mission/" class="hover:underline">ミッション</a>
+        <a href="/training/" class="hover:underline">研修</a>
+        <a href="/side-hustle/" class="hover:underline">副業紹介</a>
+        <a href="/roadmaps/" class="hover:underline">行動シート</a>
+        <a href="/ai-tools/" class="hover:underline">AIツール</a>
+        <a href="/calendar/" class="hover:underline">カレンダー</a>
+      </nav>
+    </div>
+  </header> {% endcomment %}
+  <header class="bg-white border-b">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between relative">
+      <a href="/" class="font-semibold text-lg">Wolfe Education</a>
+
+      <!-- PC用ナビ（右寄せ・横並び・gap-4） -->
+      <nav class="hidden md:flex gap-4 text-sm ml-auto">
+        <a href="/mission/" class="hover:underline">ミッション</a>
+        <a href="/training/" class="hover:underline">研修</a>
+        <a href="/side-hustle/" class="hover:underline">副業紹介</a>
+        <a href="/roadmaps/" class="hover:underline">行動シート</a>
+        <a href="/ai-tools/" class="hover:underline">AIツール</a>
+        <a href="/calendar/" class="hover:underline">カレンダー</a>
+      </nav>
+
+      <!-- ハンバーガー（md未満のみ） -->
+      <button id="menuBtn"
+              class="md:hidden inline-flex items-center justify-center p-2 rounded border text-gray-700 ml-auto"
+              aria-controls="mobileNav" aria-expanded="false" aria-label="メニューを開閉">
+        <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- モバイル用パネル（フェード＋スライドで開閉、PCでは非表示） -->
+      <div id="mobileNav"
+          class="md:hidden absolute left-0 right-0 top-full z-50
+                  bg-white border-t shadow
+                  overflow-hidden origin-top transform-gpu
+                  max-h-0 opacity-0 -translate-y-2 pointer-events-none
+                  transition-all duration-200 ease-out">
+        <nav class="flex flex-col text-sm p-4 space-y-1">
+          <a href="/mission/" class="block hover:underline py-2">ミッション</a>
+          <a href="/training/" class="block hover:underline py-2">研修</a>
+          <a href="/side-hustle/" class="block hover:underline py-2">副業紹介</a>
+          <a href="/roadmaps/" class="block hover:underline py-2">行動シート</a>
+          <a href="/ai-tools/" class="block hover:underline py-2">AIツール</a>
+          <a href="/calendar/" class="block hover:underline py-2">カレンダー</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">{% block content %}{% endblock %}</main>
+
+  <footer class="bg-gray-100 text-center text-xs py-6 text-gray-600">
+    © {{ now|default:"" }} Wolfe Education. All rights reserved.
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1rI7MiKdZyf/q0fN9Eu0mQF0tzm+qepkG5hU"
+          crossorigin="anonymous"></script>
+  
+  <script>
+    (function () {
+      const btn = document.getElementById('menuBtn');
+      const panel = document.getElementById('mobileNav');
+      const iconOpen = document.getElementById('iconOpen');
+      const iconClose = document.getElementById('iconClose');
+
+      function openPanel() {
+        btn.setAttribute('aria-expanded', 'true');
+        panel.classList.remove('max-h-0','opacity-0','-translate-y-2','pointer-events-none');
+        panel.classList.add('max-h-[75vh]','opacity-100','translate-y-0','pointer-events-auto');
+        iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+      }
+      function closePanel() {
+        btn.setAttribute('aria-expanded', 'false');
+        panel.classList.add('max-h-0','opacity-0','-translate-y-2','pointer-events-none');
+        panel.classList.remove('max-h-[75vh]','opacity-100','translate-y-0','pointer-events-auto');
+        iconOpen.classList.remove('hidden'); iconClose.classList.add('hidden');
+      }
+
+      btn?.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        expanded ? closePanel() : openPanel();
+      });
+
+      // 画面幅がmd以上になったらパネルは常に閉じる（PCは別ナビを表示）
+      const mq = window.matchMedia('(min-width: 768px)');
+      function sync(e){ if (e.matches) closePanel(); }
+      sync(mq);
+      mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+    })();
+  </script>
+
+</body>
+</html>

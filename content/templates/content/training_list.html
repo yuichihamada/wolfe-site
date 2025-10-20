@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}研修動画 - Wolfe Education{% endblock %}
+{% block content %}
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="flex items-center gap-3 mb-6">
+  <h2 class="text-2xl font-semibold">研修動画</h2>
+    <form method="get" class="ml-auto flex gap-2">
+      <select name="category" class="border rounded px-2 py-1">
+        <option value="">すべて</option>
+        {% for c in categories %}
+          <option value="{{ c.slug }}" {% if current == c.slug %}selected{% endif %}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+      <button class="px-3 py-1 border rounded">絞り込む</button>
+    </form>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    {% for v in videos %}
+      <article class="bg-white border rounded p-4">
+        <div class="aspect-video mb-3">
+          <iframe class="w-full h-full" src="{{ v.embed_src }}" title="{{ v.title }}"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h3 class="font-semibold mb-1">{{ v.title }}</h3>
+        <p class="text-sm text-gray-600">{{ v.description|truncatechars:90 }}</p>
+      </article>
+    {% empty %}
+      <p>動画は準備中です。</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Django
+db.sqlite3
+staticfiles/        # collectstatic の出力（本番で生成されるやつ）
+media/              # もしユーザーアップロードを置くなら
+*.log
+
+# 環境変数・秘密
+.env
+
+# Node/フロント（将来Vite/Nextを入れる可能性を先取り）
+node_modules/
+dist/
+.next/
+.turbo/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# OS 系
+.DS_Store

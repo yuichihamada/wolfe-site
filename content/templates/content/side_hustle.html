@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}副業コミュニティ紹介 - Wolfe Education{% endblock %}
+{% block content %}
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-2xl font-semibold mb-6">副業コミュニティ紹介</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    {% for i in items %}
+      <article class="bg-white border rounded p-5">
+        <h3 class="font-semibold text-lg mb-2">{{ i.name }}</h3>
+        <p class="text-gray-700 mb-2">{{ i.summary|linebreaks }}</p>
+        {% if i.pros %}<p class="text-sm mb-1"><span class="font-semibold">良い点:</span> {{ i.pros|linebreaks }}</p>{% endif %}
+        {% if i.cons %}<p class="text-sm mb-3"><span class="font-semibold">留意点:</span> {{ i.cons|linebreaks }}</p>{% endif %}
+        {% if i.link_url %}<a href="{{ i.link_url }}" target="_blank" rel="noopener" class="text-blue-600 underline">公式サイトへ</a>{% endif %}
+      </article>
+    {% empty %}
+      <p>準備中です。</p>
+    {% endfor %}
+  </div>
+  <p class="text-xs text-gray-500 mt-8">※収益は個人差があります。投資助言・勧誘ではありません。参加は自己判断・自己責任でお願いします。</p>
+</section>
+{% endblock %}

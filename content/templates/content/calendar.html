@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}カレンダー - Wolfe Education{% endblock %}
+{% block content %}
+<section class="max-w-5xl mx-auto px-4 py-12">
+  <h2 class="text-2xl font-semibold mb-6">スケジュール</h2>
+  {% if s and s.calendar_embed_src %}
+    <div class="aspect-video">
+      <iframe src="{{ s.calendar_embed_src }}" style="border:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+    </div>
+  {% else %}
+    <p>管理画面の「Site setting」にGoogleカレンダーの埋め込みURLを設定してください。</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,83 @@
+from django.shortcuts import render, get_object_or_404
+from .models import (
+  SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
+  SideHustleItem, Roadmap, AITool
+)
+import secrets
+import unicodedata
+from django.conf import settings
+from django.contrib import messages
+from django.shortcuts import render, redirect
+
+def get_setting():
+  return SiteSetting.objects.first()
+
+def home(request):
+  ctx = {
+    's': get_setting(),
+  }
+  return render(request, 'content/home.html', ctx)
+
+def mission(request):
+  blocks = MissionBlock.objects.all()
+  return render(request, 'content/mission.html', {'blocks': blocks})
+
+def training_list(request):
+  qs = TrainingVideo.objects.filter(is_public=True)
+  categories = TrainingCategory.objects.all()
+  c = request.GET.get('category')
+  if c:
+    qs = qs.filter(category__slug=c)
+  return render(request, 'content/training_list.html', {
+    'videos': qs,
+    'categories': categories,
+    'current': c or '',
+  })
+
+def side_hustle(request):
+  items = SideHustleItem.objects.all()
+  return render(request, 'content/side_hustle.html', {'items': items})
+
+def roadmap_list(request):
+  roads = Roadmap.objects.all()
+  return render(request, 'content/roadmap_list.html', {'roads': roads})
+
+def roadmap_detail(request, slug):
+  road = get_object_or_404(Roadmap, slug=slug)
+  return render(request, 'content/roadmap_detail.html', {'road': road})
+
+def ai_tools(request):
+  tools = AITool.objects.all()
+  return render(request, 'content/ai_tools.html', {'tools': tools})
+
+def calendar(request):
+  s = get_setting()
+  return render(request, 'content/calendar.html', {'s': s})
+
+def _norm_bytes(s: str) -> bytes:
+    # NFC 正規化してから UTF-8 で bytes 化
+    return unicodedata.normalize("NFC", (s or "")).encode("utf-8")
+
+def gate(request):
+    """共通パスワード入力ページ"""
+    if request.method == "POST":
+        pw = (request.POST.get("password") or "").strip()
+        ok = secrets.compare_digest(_norm_bytes(pw), _norm_bytes(settings.WOLFE_GATE_PASSWORD))
+        if ok:
+            request.session['gate_ok'] = True
+            request.session['gate_ver'] = settings.GATE_VERSION 
+            # 24時間保持（remember付き）/ ブラウザ閉じたら破棄（rememberなし）
+            if request.POST.get("remember"):
+                request.session.set_expiry(60 * 60 * 24)  # 24h
+            else:
+                request.session.set_expiry(0)
+            return redirect(request.GET.get("next") or "/")
+        else:
+            messages.error(request, "パスワードが違います。")
+    return render(request, "content/gate.html")
+
+def gate_logout(request):
+    """ゲート通過状態を解除"""
+    request.session.pop('gate_ok', None)
+    return redirect(settings.ACCESS_GATE_URL)
+  
