@@ -1,14 +1,38 @@
 {% extends 'base.html' %}
 {% block title %}カレンダー - Wolfe Education{% endblock %}
+
 {% block content %}
 <section class="max-w-5xl mx-auto px-4 py-12">
   <h2 class="text-2xl font-semibold mb-6">スケジュール</h2>
+
   {% if s and s.calendar_embed_src %}
-    <div class="aspect-video">
-      <iframe src="{{ s.calendar_embed_src }}" style="border:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+    <div class="grid gap-4">
+      {# --- モバイル：リスト表示（高さ 70vh） --- #}
+      <div class="md:hidden">
+        <div class="rounded-lg overflow-hidden shadow h-[70vh]">
+          <iframe
+            src="{{ s.calendar_embed_src }}&mode=AGENDA&showTabs=0&showTitle=0&showPrint=0&showCalendars=0"
+            class="w-full h-full border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      {# --- PC/タブレット：月表示（高さ 78vh） --- #}
+      <div class="hidden md:block">
+        <div class="rounded-lg overflow-hidden shadow h-[78vh]">
+          <iframe
+            src="{{ s.calendar_embed_src }}&mode=MONTH&showTabs=1&showTitle=0&showPrint=0&showCalendars=0"
+            class="w-full h-full border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
     </div>
   {% else %}
-    <p>管理画面の「Site setting」にGoogleカレンダーの埋め込みURLを設定してください。</p>
+    <p>管理画面の「Site setting」に Googleカレンダーの <code>src</code> URL を設定してください。</p>
   {% endif %}
 </section>
 {% endblock %}

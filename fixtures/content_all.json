@@ -1,0 +1,456 @@
+[
+{
+  "model": "content.sitesetting",
+  "pk": 1,
+  "fields": {
+    "hero_title": "",
+    "hero_sub": "",
+    "hero_cta_text": "",
+    "hero_cta_link": "",
+    "calendar_embed_src": "https://calendar.google.com/calendar/embed?src=05a3c6c348030f6badb40a3e1c5744eb78a0b795aa62c8b9e85e2e24a6ccbdc2%40group.calendar.google.com&ctz=Asia%2FTokyo"
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 1,
+  "fields": {
+    "title": "ミッション（Mission）",
+    "body": "教育を“仕組み”にし、同じ内容をどこでも・誰でも・何度でも学べる環境をつくる。学び→実践→共有の循環で、仲間の成長を権利収入につなげる。",
+    "order": 10
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 2,
+  "fields": {
+    "title": "ビジョン（Vision）",
+    "body": "家族のように信頼し合い、全員が黒字化し、自由な働き方と豊かな暮らしを選べるコミュニティを実現する。",
+    "order": 20
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 3,
+  "fields": {
+    "title": "Value: Familyship（心のつながり）",
+    "body": "利害より信頼。礼儀・敬意・感謝を大切にし、困ったら助け合う。関わる全員を家族のように尊重する。",
+    "order": 30
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 4,
+  "fields": {
+    "title": "Value: Open & Honest（透明性）",
+    "body": "数字・学び・失敗もオープンに共有。再現性のあるやり方を全員に開放し、改善を速く回す。",
+    "order": 40
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 5,
+  "fields": {
+    "title": "Value: Give First（先に与える）",
+    "body": "見返りより提供。情報・機会・励ましを先出しし、相手の成功を自分の喜びにする。",
+    "order": 50
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 6,
+  "fields": {
+    "title": "Value: Systemize Learning（仕組み化）",
+    "body": "属人化しない。学びはドキュメント/動画化、運用はテンプレ・チェックリスト化して誰でも回せる形に。",
+    "order": 60
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 7,
+  "fields": {
+    "title": "Value: Ownership（自分ごと）",
+    "body": "小さな約束を守る。期限・報告・振り返りを自律的に行い、結果に責任を持つ。",
+    "order": 70
+  }
+},
+{
+  "model": "content.missionblock",
+  "pk": 8,
+  "fields": {
+    "title": "Value: Wellness & Family（健康と家庭）",
+    "body": "心身の健康と家庭の時間を最優先に、持続可能な成長を目指す。",
+    "order": 80
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 1,
+  "fields": {
+    "name": "マインドセット",
+    "slug": "mindset"
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 2,
+  "fields": {
+    "name": "コンプライアンス",
+    "slug": "compliance"
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 3,
+  "fields": {
+    "name": "事業理解",
+    "slug": "business-basics"
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 1,
+  "fields": {
+    "title": "WOLFE　チームコンプライアンス研修①",
+    "category": 2,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/lJ_vEwd5PyI?si=KgUbdIfRZgG2OmjJ",
+    "duration": "7分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 2,
+  "fields": {
+    "title": "WOLFE　チームコンプライアンス研修②",
+    "category": 2,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/lAM-Z6ii00M?si=Z_QwpFGiZnt6JJPn",
+    "duration": "2分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 3,
+  "fields": {
+    "title": "スタートアップ研修",
+    "category": 3,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/IlmDD3dwRu8?si=EGYEZQSONT-S7szk",
+    "duration": "12分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 4,
+  "fields": {
+    "title": "業界初のビジネスモデルとは",
+    "category": 3,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/lP3eqKsvcD8?si=EGnDuYpGX50xJPxe",
+    "duration": "9分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 5,
+  "fields": {
+    "title": "意志 vs 方法",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/2TOAmCyoLtw?si=Fh3rxvg8hW767nWM",
+    "duration": "6分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 6,
+  "fields": {
+    "title": "確認と確信の違い",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/xrY4V4498HE?si=jJsfEGEgm8mH5srS",
+    "duration": "6分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 7,
+  "fields": {
+    "title": "チャンスの掴み方",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/pIxAaa9sDhc?si=TJIqxU-P3uw0Eg-1",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 8,
+  "fields": {
+    "title": "優先順位の決定基準",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/6DejvYENsC8?si=PhUFK2c-9MWLbMhw",
+    "duration": "7分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 9,
+  "fields": {
+    "title": "習慣化のメカニズム",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/Wx2s3jhUer8?si=9DKpefUsL0F5K50e",
+    "duration": "7分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 10,
+  "fields": {
+    "title": "1％の努力",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/kKRo67MTKac?si=su96BEtwd5_6Btes",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 2,
+  "fields": {
+    "name": "①MNP案件",
+    "summary": "携帯のキャリア契約により発生する、キャッシュバックや特典を利用するお小遣い案件。\r\n\r\n事前の簡単な準備作業と半日の店舗での契約作業で簡単に終わります。\r\n\r\n当日も担当者が同行するので安心！報酬も1週間で受け取れます。\r\n\r\n\r\n✨半年に1回出来るので年間12-20万稼げます✨\r\n\r\n💰報酬　\r\n\r\n東京🗼60,000円-100,000円\r\n\r\n大阪🐙60,000円-80,000円\r\n\r\n※報酬には交通費を一部含んだ金額を記載",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 3,
+  "fields": {
+    "name": "②モニター案件",
+    "summary": "1時間ほどの面談や資料請求を行う事で報酬が得られるお小遣い案件。\r\n\r\n店舗に行けない方も在宅で出来るお仕事あります\r\n\r\n\r\n全国対応可能なので隙間時間にお小遣いGET💰\r\n\r\n💰報酬\r\n\r\n1案件あたり3,000円～8,000円",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 4,
+  "fields": {
+    "name": "③FX口座開設",
+    "summary": "契約者に対するキャッシュバックを受け取るお小遣い案件。\r\n\r\n完全オンラインで完結します。\r\n\r\n\r\n⚫︎FX口座\r\n\r\n💰報酬 1口座 5,000円前後\r\n\r\n→約20,000円～30,000円",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 5,
+  "fields": {
+    "name": "④ブランド品 抽選",
+    "summary": "時計などのブランド品を抽選、または訪店により購入。\r\n\r\n1回で購入出来る事は稀で、何度も挑戦し購入出来たら業者が高値が買い取ってくれます。\r\n\r\n※購入に関わる費用は業者負担のため持ち出し0円\r\n\r\n\r\n💰報酬 30,000円～500,000円\r\n\r\n→購入出来たものにより大きな差があります\r\n\r\n　相場50,000～150,000円",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 6,
+  "fields": {
+    "name": "①正社員転職",
+    "summary": "無料でキャリア設計、面接対策、履歴書添削まで対応\r\n\r\n日本1内定率の高い提携先の人材会社のプロが約10万社の求人から皆さんの転職を支援\r\n\r\n更に、理想のキャリアを描き、入社祝い金もGET\r\n\r\n\r\n報酬　入社後　約100,000円〜500,000円",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 7,
+  "fields": {
+    "name": "②業務委託、非正規雇用",
+    "summary": "正社員ほどガッツリ長期で仕事をしたくない方は業務委託の仕事も紹介可能\r\n\r\n営業職がメインのため、スキルを身に付けたい方にはピッタリ\r\n\r\n\r\n報酬　毎月10,000円〜20,000円",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 8,
+  "fields": {
+    "name": "③退職サポート",
+    "summary": "退職時の失業手当、再就職手当などについて細かく無料解説\r\n\r\n知らずに辞めると100万以上も損をすることが？\r\n\r\n退職する方は必ず相談する事をオススメします",
+    "pros": "",
+    "cons": "",
+    "link_url": ""
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 9,
+  "fields": {
+    "name": "🍀人材繋ぎ方🍀",
+    "summary": "まずは下記リンクにLINEで一言ご連絡をください\r\n\r\n\r\nLINEを受けたら数分で記載出来る簡単なヒアリングシート記載、サポートの方向性をジャッジし面談\r\nを行います。\r\n\r\nその際に、転職サポートが難しいと判断した場合はこちらでサポート出来ない場合もあります。\r\n\r\n『橋野の個人LINE』",
+    "pros": "",
+    "cons": "",
+    "link_url": "https://line.me/ti/p/6ao6Kma5JH"
+  }
+},
+{
+  "model": "content.roadmap",
+  "pk": 1,
+  "fields": {
+    "name": "マスター取得ロードマップ",
+    "slug": "master",
+    "intro": "Wolfeマスターランクを目指すための行動ステップです。初期登録からアポ・研修までの流れを体系化しています。"
+  }
+},
+{
+  "model": "content.roadmap",
+  "pk": 2,
+  "fields": {
+    "name": "VIP取得ロードマップ",
+    "slug": "vip",
+    "intro": "VIPランク達成を目指す方のためのステップ。チーム構築や教育体制の整備までの流れをまとめています。"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 1,
+  "fields": {
+    "roadmap": 1,
+    "order": 1,
+    "title": "初回オリエン",
+    "detail": "Wolfeの理念と仕組みを理解しよう。自己紹介・目標設定・活動方針を確認します。",
+    "resource_url": "https://www.notion.so/orientation"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 2,
+  "fields": {
+    "roadmap": 1,
+    "order": 2,
+    "title": "LINE登録・マイページ設定",
+    "detail": "Wolfe公式LINEの登録とマイページの使い方を学びます。",
+    "resource_url": "https://www.notion.so/line-setup"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 3,
+  "fields": {
+    "roadmap": 1,
+    "order": 3,
+    "title": "研修動画の受講",
+    "detail": "チームコンプライアンス研修・事業理解研修などの動画を視聴します。",
+    "resource_url": "https://www.youtube.com/watch?v=lJ_vEwd5PyI"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 4,
+  "fields": {
+    "roadmap": 1,
+    "order": 4,
+    "title": "アポ練習・実践",
+    "detail": "アポトーク・クロージングの流れを練習し、先輩メンバーとロールプレイ。",
+    "resource_url": "https://www.notion.so/apo-practice"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 5,
+  "fields": {
+    "roadmap": 1,
+    "order": 5,
+    "title": "初アポ取得",
+    "detail": "実際に1件目のアポイントを取ってみよう。報告フォームに記録。",
+    "resource_url": "https://forms.gle/example1"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 6,
+  "fields": {
+    "roadmap": 2,
+    "order": 1,
+    "title": "チームビジョン設定",
+    "detail": "あなたのチームとしての理念・目標を明文化しましょう。",
+    "resource_url": "https://www.notion.so/team-vision"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 7,
+  "fields": {
+    "roadmap": 2,
+    "order": 2,
+    "title": "チームメンバー教育",
+    "detail": "Wolfe教育ページの使い方・活用方法を共有します。",
+    "resource_url": "https://www.notion.so/team-education"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 8,
+  "fields": {
+    "roadmap": 2,
+    "order": 3,
+    "title": "ミーティング開催",
+    "detail": "週次または月次でチームMTGを主催。運営と報告を行います。",
+    "resource_url": "https://www.notion.so/team-meeting"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 9,
+  "fields": {
+    "roadmap": 2,
+    "order": 4,
+    "title": "新規メンバーのサポート",
+    "detail": "新メンバーの初期フォロー（オリエン・LINE設定・動画案内など）を実施。",
+    "resource_url": "https://www.notion.so/member-support"
+  }
+},
+{
+  "model": "content.step",
+  "pk": 10,
+  "fields": {
+    "roadmap": 2,
+    "order": 5,
+    "title": "チーム安定化・VIP認定",
+    "detail": "チーム全員が継続的に活動できる状態を作り、VIP認定へ。",
+    "resource_url": "https://forms.gle/example2"
+  }
+},
+{
+  "model": "content.aitool",
+  "pk": 1,
+  "fields": {
+    "name": "教えてアポ取り君",
+    "category": "アポ取り",
+    "intro": "百戦錬磨のアポ取り君が、WOLFEのことやアプローチの仕方など色々教えてくれます",
+    "howto": "",
+    "link_url": "https://chatgpt.com/g/g-68089b28711081918d0cb6cef27ea348-jiao-eteahoqu-rijun"
+  }
+}
+]
