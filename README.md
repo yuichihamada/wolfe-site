@@ -1,4 +1,4 @@
-# Wolfe Education Site (Django)
+# WOLFE Connect Site (Django)
 
 ## 1) セットアップ
 ```bash
