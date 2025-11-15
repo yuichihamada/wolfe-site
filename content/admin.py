@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
   SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, Step, AITool
+  SideHustleItem, Roadmap, Step, AITool, HeroImage
 )
 
 @admin.register(SiteSetting)
@@ -41,3 +41,10 @@ class AIToolAdmin(admin.ModelAdmin):
   list_display = ("name", "category", "link_url")
   list_filter = ("category",)
   search_fields = ("name", "intro", "howto")
+
+@admin.register(HeroImage)
+class HeroImageAdmin(admin.ModelAdmin):
+    list_display = ("slot", "order", "alt", "is_active", "start_at", "end_at")
+    list_filter = ("slot", "is_active")
+    search_fields = ("alt",)
+    ordering = ("slot", "order", "id")

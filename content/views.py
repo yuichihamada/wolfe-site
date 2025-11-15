@@ -1,21 +1,30 @@
 from django.shortcuts import render, get_object_or_404
 from .models import (
   SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, AITool
+  SideHustleItem, Roadmap, AITool, HeroImage
 )
 import secrets
 import unicodedata
 from django.conf import settings
 from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.db.models import Q
+from django.utils import timezone
 
 def get_setting():
   return SiteSetting.objects.first()
 
 def home(request):
-  ctx = {
-    's': get_setting(),
-  }
+  s = get_setting()
+  now = timezone.now()
+  hero_images = (
+      HeroImage.objects
+      .filter(slot=HeroImage.SLOT_HOME, is_active=True)
+      .filter(Q(start_at__isnull=True) | Q(start_at__lte=now))
+      .filter(Q(end_at__isnull=True) | Q(end_at__gte=now))
+      .order_by("order", "id")
+  )
+  ctx = {'s': s, 'hero_images': hero_images}
   return render(request, 'content/home.html', ctx)
 
 def mission(request):
@@ -35,8 +44,15 @@ def training_list(request):
   })
 
 def side_hustle(request):
-  items = SideHustleItem.objects.all()
-  return render(request, 'content/side_hustle.html', {'items': items})
+    qs = SideHustleItem.objects.all().order_by('id')
+
+    context = {
+        'pocket_items': qs.filter(category='pocket'),
+        'career_items': qs.filter(category='career'),
+        'life_items': qs.filter(category='life'),
+        'other_items': qs.filter(category='other'),
+    }
+    return render(request, 'content/side_hustle.html', context)
 
 def roadmap_list(request):
   roads = Roadmap.objects.all()

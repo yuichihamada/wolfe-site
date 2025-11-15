@@ -24,3 +24,8 @@ yarn.lock
 
 # OS 系
 .DS_Store
+
+# Security
+.ssh/
+*.pem
+*.key

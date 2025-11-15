@@ -13,9 +13,61 @@
         <a href="/training/" class="inline-block bg-black text-white px-5 py-3 rounded">研修を見る</a>
       {% endif %}
     </div>
-    <div class="aspect-video flex items-center justify-center bg-black rounded">
-      <img src="{% static 'images/wolfe-logo.png' %}" alt="Wolfe Logo" class="max-h-full max-w-full object-contain">
+    <div id="hero-fader"
+        class="aspect-video relative bg-black rounded overflow-hidden"
+        data-interval="6000">
+      {% if hero_images %}
+        {% for hi in hero_images %}
+          <img src="{{ hi.image.url }}" alt="{{ hi.alt|default:'Hero' }}"
+              class="hero-slide absolute inset-0 w-full h-full object-cover
+                      transition-opacity duration-1000 ease-linear
+                      {% if forloop.first %}opacity-100 z-20{% else %}opacity-0 z-10{% endif %}">
+        {% endfor %}
+      {% else %}
+        <img src="{% static 'images/wolfe-logo.png' %}"
+            class="absolute inset-0 w-full h-full object-contain opacity-100 z-20">
+      {% endif %}
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  const root = document.getElementById('hero-fader');
+  if (!root) return;
+  const slides = Array.from(root.querySelectorAll('.hero-slide'));
+  if (slides.length < 2) return;
+
+  let i = 0;
+  const interval = parseInt(root.getAttribute('data-interval') || '6000', 10);
+  let hidden = document.hidden;
+
+  function show(next){
+    if (next === i) return;
+
+    const current = slides[i];
+    const incoming = slides[next];
+
+    // まず次を前面に
+    incoming.classList.remove('opacity-0');
+    incoming.classList.add('opacity-100', 'z-20');
+
+    // 今のやつを背面＆薄く
+    current.classList.remove('opacity-100', 'z-20');
+    current.classList.add('opacity-0', 'z-10');
+
+    i = next;
+  }
+
+  function tick(){
+    if (!hidden) {
+      const next = (i + 1) % slides.length;
+      show(next);
+    }
+  }
+
+  document.addEventListener('visibilitychange', () => { hidden = document.hidden; });
+  setInterval(tick, interval);
+})();
+</script>
 {% endblock %}

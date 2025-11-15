@@ -20,7 +20,8 @@
       <article class="bg-white border rounded p-4">
         <div class="aspect-video mb-3">
           <iframe class="w-full h-full" src="{{ v.embed_src }}" title="{{ v.title }}"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <h3 class="font-semibold mb-1">{{ v.title }}</h3>
         <p class="text-sm text-gray-600">{{ v.description|truncatechars:90 }}</p>

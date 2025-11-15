@@ -1,21 +1,249 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}副業コミュニティ紹介 - Wolfe Education{% endblock %}
+
 {% block content %}
-<section class="max-w-6xl mx-auto px-4 py-12">
-  <h2 class="text-2xl font-semibold mb-6">副業コミュニティ紹介</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    {% for i in items %}
-      <article class="bg-white border rounded p-5">
-        <h3 class="font-semibold text-lg mb-2">{{ i.name }}</h3>
-        <p class="text-gray-700 mb-2">{{ i.summary|linebreaks }}</p>
-        {% if i.pros %}<p class="text-sm mb-1"><span class="font-semibold">良い点:</span> {{ i.pros|linebreaks }}</p>{% endif %}
-        {% if i.cons %}<p class="text-sm mb-3"><span class="font-semibold">留意点:</span> {{ i.cons|linebreaks }}</p>{% endif %}
-        {% if i.link_url %}<a href="{{ i.link_url }}" target="_blank" rel="noopener" class="text-blue-600 underline">公式サイトへ</a>{% endif %}
-      </article>
-    {% empty %}
-      <p>準備中です。</p>
-    {% endfor %}
+
+<!-- Hero -->
+<section class="relative h-64 md:h-80 mb-10 overflow-hidden">
+  <img src="{% static 'images/副業コミュニティイメージ.png' %}"
+       alt="副業コミュニティ"
+       class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
+    <h1 class="text-3xl md:text-4xl font-bold text-white mb-3">副業コミュニティ</h1>
+    <p class="text-white/90">
+      メンバーの活動をサポートする、副業・キャリア・ライフサポートの総合窓口です。
+    </p>
   </div>
-  <p class="text-xs text-gray-500 mt-8">※収益は個人差があります。投資助言・勧誘ではありません。参加は自己判断・自己責任でお願いします。</p>
 </section>
+
+<div class="max-w-6xl mx-auto px-4 pb-16 space-y-12">
+
+  <!-- 4つのWOLFE活動サポート -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">4つのWOLFE活動サポート</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- お小遣いサポート -->
+      <article class="rounded-lg border bg-pink-50 p-4">
+        <h3 class="font-semibold text-lg mb-2">お小遣いサポート</h3>
+        <p class="text-sm leading-relaxed">
+          紹介型の副業が難しいという方に向けて、誰でも簡単に作業だけすれば
+          お小遣いが貰える高単価案件を厳選しました！！<br>アルバイトをするよりも、
+          自宅で空いた時間に出来るので手離れも良く、すべてのお小遣い案件で
+          サポート担当がいるので初めての方も安心して取り組めます。
+        </p>
+      </article>
+
+      <!-- ビジネスサポート -->
+      <article class="rounded-lg border bg-orange-50 p-4">
+        <h3 class="font-semibold text-lg mb-2">ビジネスサポート</h3>
+        <p class="text-sm leading-relaxed">
+          WOLFEのメンバーさんに、よりやり易い環境でビジネスに取り組んでもらうために、
+          信頼できるパートナー企業の商品・サービスを特別価格で提供しています。<br>
+          ビジネスにかかる費用を少しでも抑えつつ、更にビジネスが飛躍するサービスを厳選しました。
+        </p>
+      </article>
+
+      <!-- キャリアサポート -->
+      <article class="rounded-lg border bg-blue-50 p-4">
+        <h3 class="font-semibold text-lg mb-2">キャリアサポート</h3>
+        <p class="text-sm leading-relaxed">
+          就職・転職・キャリアアップでお悩みの方を、提携する人材企業を通じて今後のキャリアを
+          サポートします。<br>生活あってこそのWOLFE活動です！<br>WOLFEだけではなく、
+          皆さんの本業の悩みがあれば、一人で悩まずぜひ相談してください。
+          WOLFE外のご友人のご紹介も可能です。
+        </p>
+      </article>
+
+      <!-- ライフサポート -->
+      <article class="rounded-lg border bg-green-50 p-4">
+        <h3 class="font-semibold text-lg mb-2">ライフサポート（固定費削減）</h3>
+        <p class="text-sm leading-relaxed">
+          収入を上げることだけが生活を豊かにするわけではありません。
+          毎月支払っている固定費の見直しも、積み重なれば大きな金額になります！<br>
+          1万円の固定費削減は1万円の収入UPと同じ。無駄な固定費を減らし、
+          WOLFEのビジネス活動やご自身の将来資金に充てていきましょう。
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- サポート利用ルール -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">サポート利用ルール</h2>
+    <div class="rounded-lg border bg-red-50 p-4 text-sm leading-relaxed space-y-1">
+      <p>1. WOLFE活動をやりやすくするためのサポートのため、<span class="text-red-600 font-semibold">WOLFEに対して頑張っている方を対象</span>にしています。</p>
+      <p>2. 当サポートはチーム内限定のため、WOLFEの非会員はもちろん、WOLFEの他系列の会員など<span class="text-red-600 font-semibold">他言無用</span>でお願いします。</p>
+      <p>3. 当サポートは、WOLFEではなく<span class="text-red-600 font-semibold">「チーム内で独自に行っている」</span>ものです。<span class="text-red-600 font-semibold">WOLFEが提供しているサポートではありません。</span></p>
+      <p>4. サポートを受けたい場合は、ページ下部の申込フォームより申請してください。</p>
+      <p>5. 報酬・支払時期・条件など、資料と異なる場合もあります。</p>
+      <p>6. 申し込んだ案件以外を業者から提案された場合は、必ずリーダーまで連絡をしてください。</p>
+    </div>
+  </section>
+
+  <!-- お小遣い案件 -->
+  {% if pocket_items %}
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">お小遣い案件</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for i in pocket_items %}
+      <article class="bg-white border rounded-lg p-5">
+        {% if i.image %}
+          <img src="{{ i.image.url }}" alt="{{ i.name }}"
+              class="w-full h-48 object-cover">
+        {% else %}
+          <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+            No Image
+          </div>
+        {% endif %}
+        <h3 class="font-semibold text-lg mb-1">{{ i.name }}</h3>
+        {% if i.reward %}
+          <p class="text-sm font-semibold text-amber-700 mb-1">報酬の目安：{{ i.reward }}</p>
+        {% endif %}
+        {% if i.summary %}
+          <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
+        {% endif %}
+        {% if i.pros %}
+          <p class="text-xs mb-1"><span class="font-semibold">ポイント：</span><span class="whitespace-pre-line">{{ i.pros }}</span></p>
+        {% endif %}
+        {% if i.cons %}
+          <p class="text-xs text-red-700"><span class="font-semibold">留意点：</span><span class="whitespace-pre-line">{{ i.cons }}</span></p>
+        {% endif %}
+        {% if i.link_url %}
+          <a href="{{ i.link_url }}" target="_blank" rel="noopener"
+             class="inline-flex items-center mt-2 text-xs text-blue-600 underline">
+            詳細を見る
+          </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- キャリア支援 -->
+  {% if career_items %}
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">キャリア支援</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for i in career_items %}
+      <article class="bg-white border rounded-lg p-5">
+        {% if i.image %}
+          <img src="{{ i.image.url }}" alt="{{ i.name }}"
+              class="w-full h-48 object-cover">
+        {% else %}
+          <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+            No Image
+          </div>
+        {% endif %}
+        <h3 class="font-semibold text-lg mb-1">{{ i.name }}</h3>
+        {% if i.reward %}
+          <p class="text-sm font-semibold text-amber-700 mb-1">報酬・特典の目安：{{ i.reward }}</p>
+        {% endif %}
+        {% if i.summary %}
+          <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
+        {% endif %}
+        {% if i.pros %}
+          <p class="text-xs mb-1"><span class="font-semibold">ポイント：</span><span class="whitespace-pre-line">{{ i.pros }}</span></p>
+        {% endif %}
+        {% if i.cons %}
+          <p class="text-xs text-red-700"><span class="font-semibold">留意点：</span><span class="whitespace-pre-line">{{ i.cons }}</span></p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- 固定費削減（ライフサポート） -->
+  {% if life_items %}
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">固定費削減（ライフサポート）</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for i in life_items %}
+      <article class="bg-white border rounded-lg p-5">
+        {% if i.image %}
+          <img src="{{ i.image.url }}" alt="{{ i.name }}"
+              class="w-full h-48 object-cover">
+        {% else %}
+          <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+            No Image
+          </div>
+        {% endif %}
+        <h3 class="font-semibold text-lg mb-1">{{ i.name }}</h3>
+        {% if i.reward %}
+          <p class="text-sm font-semibold text-amber-700 mb-1">金額・特典の目安：{{ i.reward }}</p>
+        {% endif %}
+        {% if i.summary %}
+          <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
+        {% endif %}
+        {% if i.pros %}
+          <p class="text-xs mb-1"><span class="font-semibold">ポイント：</span><span class="whitespace-pre-line">{{ i.pros }}</span></p>
+        {% endif %}
+        {% if i.cons %}
+          <p class="text-xs text-red-700"><span class="font-semibold">留意点：</span><span class="whitespace-pre-line">{{ i.cons }}</span></p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- その他カテゴリがあれば -->
+  {% if other_items %}
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">その他のサポート</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for i in other_items %}
+      <article class="bg-white border rounded-lg p-5">
+        {% if i.image %}
+          <img src="{{ i.image.url }}" alt="{{ i.name }}"
+              class="w-full h-48 object-cover">
+        {% else %}
+          <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+            No Image
+          </div>
+        {% endif %}
+        <h3 class="font-semibold text-lg mb-1">{{ i.name }}</h3>
+        {% if i.summary %}
+          <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- 申込導線 -->
+  <section class="mt-8">
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">副業申込・ご相談について</h2>
+        <p class="text-sm text-gray-800 mb-3 whitespace-pre-line">
+ご興味のある方は、副業申込フォームをご記入の上、
+直上リーダーまでご連絡ください。
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1eUBuqvtzDMjlv45fvi5Dy0lFoPolNg6_omvJ2gyEjfIo_w/viewform"
+           class="inline-flex items-center px-5 py-2 rounded-lg text-sm font-semibold bg-emerald-600 text-white hover:bg-emerald-700">
+          副業申込フォームはこちら
+        </a>
+        <p class="text-xs text-gray-500 mt-2">
+          ※フォーム送信後、LINEなどでリーダーに一言連絡をお願いします。
+        </p>
+      </div>
+      <div class="hidden md:block">
+        <img src="{% static 'images/問い合わせイメージ.png' %}"
+             alt="問い合わせイメージ"
+             class="w-full rounded-lg border object-cover">
+      </div>
+    </div>
+  </section>
+
+  <p class="text-xs text-gray-500 mt-10">
+    ※収益は個人差があります。投資助言・勧誘ではありません。参加は自己判断・自己責任でお願いします。
+  </p>
+
+</div>
+
 {% endblock %}

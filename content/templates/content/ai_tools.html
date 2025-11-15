@@ -2,19 +2,122 @@
 {% block title %}AIツール - Wolfe Education{% endblock %}
 {% block content %}
 <section class="max-w-6xl mx-auto px-4 py-12">
-  <h2 class="text-2xl font-semibold mb-6">便利なAIツール</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    {% for t in tools %}
-      <article class="bg-white border rounded p-5">
-        <p class="text-xs text-gray-500 mb-1">{{ t.category }}</p>
-        <h3 class="font-semibold mb-2">{{ t.name }}</h3>
-        <p class="text-gray-700 mb-3">{{ t.intro|linebreaks }}</p>
-        {% if t.howto %}<details class="text-sm mb-3"><summary class="cursor-pointer">使い方</summary><div class="mt-2">{{ t.howto|linebreaks }}</div></details>{% endif %}
-        <a href="{{ t.link_url }}" target="_blank" rel="noopener" class="text-blue-600 underline">開く</a>
-      </article>
-      {% empty %}
-        <p>準備中です。</p>
-    {% endfor %}
+
+  <!-- 説明エリア -->
+  <header class="mb-8">
+    <h2 class="text-2xl font-semibold mb-3">便利なAIツール</h2>
+    <p class="text-sm text-gray-700">
+      このページでは、WOLFE活動でよく使う「アポイントの組み方」「会話の進め方」
+      「WOLFEの伝え方」などをサポートするAIツールを紹介しています。<br>
+      現在は、アポ取りのコツに特化したAI <strong>「教えてアポドリ君」</strong> を公開中です。
+      必要に応じて、今後もツールを追加していく予定です。
+    </p>
+  </header>
+
+  <!-- ★ ここを大きく修正！（右枠を広げる） -->
+  <div class="grid gap-6 md:grid-cols-[1.6fr,1fr] items-start">
+
+    {# --- 左側：AIツール本体エリア --- #}
+    <div>
+      {% if tools|length == 1 %}
+        <div class="max-w-xl">
+          {% for t in tools %}
+            <article class="bg-white border rounded-lg p-6 shadow-sm">
+
+              {% if t.image %}
+                <img src="{{ t.image.url }}" class="w-28 h-28 rounded-full object-cover mb-4" alt="{{ t.name }}">
+              {% else %}
+                <div class="w-20 h-20 bg-gray-200 rounded mb-4 flex items-center justify-center text-gray-500">
+                  <span class="text-xs">No Image</span>
+                </div>
+              {% endif %}
+
+              <p class="text-xs text-gray-500 mb-1">{{ t.category }}</p>
+              <h3 class="font-semibold text-lg mb-2">{{ t.name }}</h3>
+              <p class="text-gray-700 mb-3 text-sm">{{ t.intro|linebreaks }}</p>
+
+              {% if t.howto %}
+                <details class="text-sm mb-4">
+                  <summary class="cursor-pointer">使い方を見る</summary>
+                  <div class="mt-2">{{ t.howto|linebreaks }}</div>
+                </details>
+              {% endif %}
+
+              <a href="{{ t.link_url }}" target="_blank" rel="noopener"
+                class="inline-block px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700">
+                ツールを開く
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+
+      {% else %}
+        <div class="grid sm:grid-cols-2 gap-6">
+          {% for t in tools %}
+            <article class="bg-white border rounded p-5">
+
+              {% if t.image %}
+                <img src="{{ t.image.url }}" class="w-20 h-20 rounded-full object-cover mb-4" alt="{{ t.name }}">
+              {% else %}
+                <div class="w-16 h-16 bg-gray-200 rounded mb-4 flex items-center justify-center text-gray-500">
+                  <span class="text-xs">No Image</span>
+                </div>
+              {% endif %}
+
+              <p class="text-xs text-gray-500 mb-1">{{ t.category }}</p>
+              <h3 class="font-semibold mb-2">{{ t.name }}</h3>
+
+              <p class="text-gray-700 mb-3 text-sm">{{ t.intro|linebreaks }}</p>
+
+              {% if t.howto %}
+                <details class="text-sm mb-3">
+                  <summary class="cursor-pointer">使い方</summary>
+                  <div class="mt-2">{{ t.howto|linebreaks }}</div>
+                </details>
+              {% endif %}
+
+              <a href="{{ t.link_url }}" target="_blank" rel="noopener"
+                class="inline-block text-blue-600 text-sm underline">
+                開く
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {# --- 右側：使い方のヒントエリア（枠を広げた）--- #}
+    <aside class="space-y-4 text-sm text-gray-700">
+
+      <div class="border rounded-lg p-4 bg-white">
+        <p class="font-semibold text-base mb-2">こんな時に便利</p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li>アポをどう切り出せばいいか迷ったとき</li>
+          <li>相手のタイプに合わせた話し方を知りたいとき</li>
+          <li>LINE文面の言い回しを考えたいとき</li>
+        </ul>
+      </div>
+
+      <div class="border rounded-lg p-4 bg-white">
+        <p class="font-semibold text-base mb-2">WOLFE活動での活用例</p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li>初回アポの誘い方のパターン出し</li>
+          <li>断られた後の切り返し方の提案</li>
+          <li>相手の不安や迷いへの寄り添い方のヒント</li>
+        </ul>
+      </div>
+
+      <div class="border rounded-lg p-4 bg-white">
+        <p class="font-semibold text-base mb-2">うまく使うコツ</p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li>状況をできるだけ具体的に入力するほど精度UP</li>
+          <li>回答はそのままではなく“参考にして調整”がベスト</li>
+          <li>個人名などの入力は避ける</li>
+        </ul>
+      </div>
+
+    </aside>
   </div>
+
 </section>
 {% endblock %}
