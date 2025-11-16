@@ -1,3 +1,4 @@
+import dj_database_url
 from pathlib import Path
 import environ
 
@@ -10,6 +11,14 @@ environ.Env.read_env(BASE_DIR / '.env')
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
 ALLOWED_HOSTS = [h.strip() for h in env('ALLOWED_HOSTS').split(',') if h.strip()] or ['*']
+
+DATABASES = {
+    "default": dj_database_url.config(
+        default=env("DATABASE_URL", default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+}
 
 INSTALLED_APPS = [
   'django.contrib.admin',
