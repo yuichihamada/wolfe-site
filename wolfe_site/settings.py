@@ -8,8 +8,8 @@ env = environ.Env(
 environ.Env.read_env(BASE_DIR / '.env')
 
 DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY', default='dev-key')
-ALLOWED_HOSTS = [h.strip() for h in env('ALLOWED_HOSTS', default='').split(',') if h.strip()] or ['*']
+SECRET_KEY = env('SECRET_KEY')
+ALLOWED_HOSTS = [h.strip() for h in env('ALLOWED_HOSTS').split(',') if h.strip()] or ['*']
 
 INSTALLED_APPS = [
   'django.contrib.admin',
@@ -68,10 +68,8 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ここから下を末尾などに追記
-WOLFE_GATE_PASSWORD = env('WOLFE_GATE_PASSWORD', default='wolfe-education')
-
-GATE_VERSION = env.str('WOLFE_GATE_VERSION', default='v1')
+WOLFE_GATE_PASSWORD = env('WOLFE_GATE_PASSWORD')
+GATE_VERSION = env.str('WOLFE_GATE_VERSION')
 
 # ゲートのURLと除外URL（正規表現）
 ACCESS_GATE_URL = '/gate/'
