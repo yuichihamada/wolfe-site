@@ -29,7 +29,7 @@ MIDDLEWARE = [
   'django.middleware.csrf.CsrfViewMiddleware',
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
-  # 'wolfe_site.middleware.AccessGateMiddleware',
+  'wolfe_site.middleware.AccessGateMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -84,5 +84,3 @@ ACCESS_GATE_EXEMPT_URLS = [
 # 「覚えておく」期間（24時間）
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_AGE = 60 * 60 * 24
-
-SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
