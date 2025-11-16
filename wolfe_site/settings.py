@@ -84,3 +84,5 @@ ACCESS_GATE_EXEMPT_URLS = [
 # 「覚えておく」期間（24時間）
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_AGE = 60 * 60 * 24
+
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
