@@ -8,8 +8,8 @@ from django.core.management import call_command
 def run_migrate(request):
     call_command("migrate")
     call_command("createsuperuser", 
-                 username="admin",
-                 email="admin@example.com",
+                 username="yuichihamada",
+                 email="ilovemrchildrensazan@gmail.com",
                  interactive=False)
     return HttpResponse("Migration & superuser done.")
 
