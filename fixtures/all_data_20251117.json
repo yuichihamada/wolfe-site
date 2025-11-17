@@ -1,0 +1,3351 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-11-01T10:11:08.813Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Site Setting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-11-01T10:47:26.292Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Site Setting",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Hero title\", \"Hero sub\", \"Hero cta text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-11-01T10:49:02.348Z",
+    "user": 2,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "教えてアポ取り君",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-11-01T10:57:23.227Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "10. ミッション（Mission）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-11-01T10:58:18.836Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "20. ビジョン（Vision）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-11-01T10:58:36.790Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "30. Value: Familyship（心のつながり）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-11-01T10:59:24.842Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "40. 40 Value: Open & Honest（透明性）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-11-01T10:59:42.674Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "50. Value: Give First（先に与える）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-11-01T11:00:03.978Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "60. Value: Systemize Learning（仕組み化）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-11-01T11:00:10.437Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "40. Value: Open & Honest（透明性）",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-11-01T11:00:34.647Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "70. Value: Ownership（自分ごと）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-11-01T11:00:53.073Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "80. Value: Wellness & Family（健康と家庭）",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-11-01T11:08:14.142Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "WOLFE　チームコンプライアンス研修①",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-11-01T11:11:36.790Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "マインドセット",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-11-01T11:13:58.309Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "マインドセット",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-11-01T11:14:15.166Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "コンプライアンス",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-11-01T11:14:31.347Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "事業理解",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-11-01T11:15:02.826Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "WOLFE　チームコンプライアンス研修①",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Duration\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-11-01T11:15:52.686Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "WOLFE　チームコンプライアンス研修②",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-11-01T11:40:18.245Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "スタートアップ研修",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-11-01T11:40:57.711Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "業界初のビジネスモデルとは",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-11-01T11:41:45.078Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "意志 vs 方法",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-11-01T11:42:27.482Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "確認と確信の違い",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-11-01T11:43:07.907Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "チャンスの掴み方",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-11-01T11:44:36.518Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "優先順位の決定基準",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-11-01T11:45:20.684Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "習慣化のメカニズム",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-11-01T11:45:47.972Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "1％の努力",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-11-01T11:49:26.940Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "副業コミュニティ概要",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-11-01T11:51:22.178Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "①MNP案件",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-11-01T12:18:21.009Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "②モニター案件",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-11-01T12:18:45.954Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "③FX口座開設",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-11-01T12:19:08.849Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Pros\", \"Cons\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-11-01T12:19:16.761Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "②モニター案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"Pros\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-11-01T12:19:22.647Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"Pros\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-11-01T12:19:25.765Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-11-01T12:19:28.295Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "②モニター案件",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-11-01T12:19:30.641Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "③FX口座開設",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-11-01T12:19:54.368Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "④ブランド品 抽選",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-11-01T12:20:34.909Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "副業コミュニティ概要",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-11-01T12:21:18.504Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "①正社員転職",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-11-01T12:21:35.725Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "②業務委託、非正規雇用",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-11-01T12:21:49.811Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "③退職サポート",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-11-01T12:22:17.361Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "🍀人材繋ぎ方🍀",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-11-01T12:22:49.557Z",
+    "user": 2,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "🍀人材繋ぎ方🍀",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"Link url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-11-01T12:30:15.728Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "マスター取得ロードマップ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"step\", \"object\": \"\\u30de\\u30b9\\u30bf\\u30fc\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 01 \\u521d\\u56de\\u30aa\\u30ea\\u30a8\\u30f3\"}}, {\"added\": {\"name\": \"step\", \"object\": \"\\u30de\\u30b9\\u30bf\\u30fc\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 02 LINE\\u767b\\u9332\\u30fb\\u30de\\u30a4\\u30da\\u30fc\\u30b8\\u8a2d\\u5b9a\"}}, {\"added\": {\"name\": \"step\", \"object\": \"\\u30de\\u30b9\\u30bf\\u30fc\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 03 \\u7814\\u4fee\\u52d5\\u753b\\u306e\\u53d7\\u8b1b\"}}, {\"added\": {\"name\": \"step\", \"object\": \"\\u30de\\u30b9\\u30bf\\u30fc\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 04 \\u30a2\\u30dd\\u7df4\\u7fd2\\u30fb\\u5b9f\\u8df5\"}}, {\"added\": {\"name\": \"step\", \"object\": \"\\u30de\\u30b9\\u30bf\\u30fc\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 05 \\u521d\\u30a2\\u30dd\\u53d6\\u5f97\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-11-01T12:32:58.523Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "VIP取得ロードマップ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"step\", \"object\": \"VIP\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 01 \\u30c1\\u30fc\\u30e0\\u30d3\\u30b8\\u30e7\\u30f3\\u8a2d\\u5b9a\"}}, {\"added\": {\"name\": \"step\", \"object\": \"VIP\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 02 \\u30c1\\u30fc\\u30e0\\u30e1\\u30f3\\u30d0\\u30fc\\u6559\\u80b2\"}}, {\"added\": {\"name\": \"step\", \"object\": \"VIP\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 03 \\u30df\\u30fc\\u30c6\\u30a3\\u30f3\\u30b0\\u958b\\u50ac\"}}, {\"added\": {\"name\": \"step\", \"object\": \"VIP\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 04 \\u65b0\\u898f\\u30e1\\u30f3\\u30d0\\u30fc\\u306e\\u30b5\\u30dd\\u30fc\\u30c8\"}}, {\"added\": {\"name\": \"step\", \"object\": \"VIP\\u53d6\\u5f97\\u30ed\\u30fc\\u30c9\\u30de\\u30c3\\u30d7 - 05 \\u30c1\\u30fc\\u30e0\\u5b89\\u5b9a\\u5316\\u30fbVIP\\u8a8d\\u5b9a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-11-09T16:43:44.254Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "ホーム | hero/wolfe-picture1.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-11-09T16:43:56.738Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-11-09T16:44:06.986Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "ホーム | hero/wolfe-picture3.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-11-09T16:44:18.575Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "ホーム | hero/wolfe-picture4.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-11-09T16:44:30.587Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "ホーム | hero/wolfe-picture5.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-11-09T16:44:39.221Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "6",
+    "object_repr": "ホーム | hero/wolfe-picture6.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-11-09T16:44:46.875Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "ホーム | hero/wolfe-picture7.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-11-09T16:45:02.721Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-11-09T16:59:09.243Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-11-09T16:59:18.669Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-11-09T16:59:30.065Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-11-09T16:59:33.386Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-11-09T16:59:37.613Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-11-09T16:59:41.428Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-11-09T16:59:45.224Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-11-09T16:59:49.737Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-11-09T16:59:53.188Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-11-09T17:01:02.355Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "ホーム | hero/wolfe-logo.png (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-11-09T17:01:11.313Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "ホーム | hero/wolfe-picture1.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-11-09T17:01:16.046Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-11-09T17:01:21.117Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "ホーム | hero/wolfe-picture3.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-11-09T17:01:25.480Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "ホーム | hero/wolfe-picture4.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-11-09T17:01:29.339Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "ホーム | hero/wolfe-picture5.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-11-09T17:01:33.807Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "6",
+    "object_repr": "ホーム | hero/wolfe-picture6.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-11-09T17:01:38.051Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "ホーム | hero/wolfe-picture7.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-11-09T17:01:42.305Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-11-09T17:03:32.779Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "ホーム | hero/wolfe-picture1.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-11-09T17:03:41.397Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-11-09T17:03:46.129Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-11-09T17:03:52.040Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-11-09T17:03:57.904Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "ホーム | hero/wolfe-picture3.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-11-09T17:04:01.859Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "ホーム | hero/wolfe-picture1.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-11-09T17:04:08.789Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "ホーム | hero/wolfe-picture3.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-11-09T17:04:13.148Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-11-09T17:04:17.880Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "ホーム | hero/wolfe-picture3.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-11-09T17:04:22.648Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "ホーム | hero/wolfe-picture4.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-11-09T17:04:25.146Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "ホーム | hero/wolfe-picture4.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-11-09T17:04:27.626Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "ホーム | hero/wolfe-picture3.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-11-09T17:04:30.163Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "ホーム | hero/wolfe-picture5.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-11-09T17:05:21.265Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-11-09T17:05:29.457Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-11-09T17:05:33.388Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-11-09T17:10:28.537Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "ホーム | hero/wolfe-picture7.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-11-09T17:11:04.819Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "ホーム | hero/wolfe-picture1.jpg (ON)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-11-09T17:11:24.019Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-11-09T17:11:29.255Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "ホーム | hero/wolfe-picture8.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-11-09T17:11:59.656Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-11-09T17:12:03.838Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "ホーム | hero/wolfe-picture4.jpg (ON)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u8868\\u793a\\u9806\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-11-09T17:12:33.381Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "ホーム | hero/wolfe-picture2.jpg (ON)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-11-15T10:13:55.263Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "WOLFE　チームコンプライアンス研修①",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-11-15T11:28:41.407Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-11-15T11:29:49.961Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-11-15T11:31:39.421Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-11-15T11:34:27.993Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-11-15T11:34:50.089Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-11-15T11:35:21.795Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-11-15T11:35:27.628Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "部内戦",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-11-15T11:44:16.845Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "ラリー",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Video url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-11-15T12:01:30.462Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "ラリー",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-11-15T12:05:23.592Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "80. Value: Wellness & Family（健康と家庭）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-11-15T12:05:27.707Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "70. Value: Ownership（自分ごと）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-11-15T12:05:30.561Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "50. Value: Give First（先に与える）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-11-15T12:05:33.440Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "30. Value: Familyship（心のつながり）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-11-15T12:05:35.939Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "20. ビジョン（Vision）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-11-15T12:05:38.549Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "40. Value: Open & Honest（透明性）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-11-15T12:05:41.282Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "60. Value: Systemize Learning（仕組み化）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-11-15T12:05:44.039Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "10. ミッション（Mission）",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-11-15T12:45:29.724Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "🍀人材繋ぎ方🍀",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-11-15T12:45:33.089Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "③退職サポート",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-11-15T12:45:36.423Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "②業務委託、非正規雇用",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-11-15T12:45:39.525Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "①正社員転職",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-11-15T12:45:43.161Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "④ブランド品 抽選",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-11-15T12:45:46.071Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "③FX口座開設",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-11-15T12:45:49.471Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "②モニター案件",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-11-15T12:45:52.437Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "①MNP案件",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-11-15T13:12:14.686Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-11-15T13:17:58.732Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-11-15T13:25:45.888Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "②モニター案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-11-15T13:25:54.141Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "③FX口座開設",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-11-15T13:26:13.252Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-11-15T13:29:45.113Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "④ブランド品 抽選",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-11-15T13:41:35.712Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "①お引越しサポート",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-11-15T13:42:19.231Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "①正社員転職",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-11-15T13:42:30.988Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "①正社員転職",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-11-15T13:42:41.139Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "③退職サポート",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-11-15T13:47:46.890Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "②業務委託・非正規雇用",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-11-15T13:48:06.691Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "②家庭のインフラ見直し",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-11-15T13:56:51.253Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "①MNP案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-11-15T13:57:24.474Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "②モニター案件",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-11-15T13:57:32.640Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "③FX口座開設",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-11-15T13:57:55.713Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "④ブランド品 抽選",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-11-15T13:58:04.972Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "①正社員転職",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-11-15T13:58:25.649Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "②業務委託・非正規雇用",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-11-15T13:58:33.931Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "③退職サポート",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-11-15T13:58:41.934Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "①お引越しサポート",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-11-15T13:58:49.456Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "②家庭のインフラ見直し",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u30a4\\u30e1\\u30fc\\u30b8\\u753b\\u50cf\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-11-15T15:17:59.800Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "教えてアポ取り君",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-11-15T15:38:27.281Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "VIP取得ロードマップ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-11-15T15:38:31.078Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "マスター取得ロードマップ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-11-15T16:47:41.409Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "③FX口座開設",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cons\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-11-15T16:47:56.034Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "④ブランド品 抽選",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-11-15T16:48:31.407Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "①正社員転職",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reward\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-11-15T16:48:49.857Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "②業務委託・非正規雇用",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reward\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-11-15T16:49:37.553Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "③退職サポート",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reward\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-11-15T16:50:18.413Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "③退職サポート",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cons\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-11-17T03:59:34.211Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "yuichihamada",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-11-17T04:02:08.398Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "事業知識",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-11-17T04:02:20.422Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "業界初のビジネスモデルとは",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-11-17T04:04:32.283Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "5人の法則",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-11-17T04:05:16.826Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "「やる理由」の強さ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-11-17T04:05:55.863Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "代価の法則の落とし穴",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-11-17T04:06:37.750Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "15",
+    "object_repr": "本当にうまくいく計画の秘訣",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-11-17T04:07:41.388Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "クロージング",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-11-17T04:08:16.544Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "【クロージング】ポイントの解説",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-11-17T04:08:46.926Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "【クロージング】魔法の4テクニック",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add site setting",
+    "content_type": 7,
+    "codename": "add_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change site setting",
+    "content_type": 7,
+    "codename": "change_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete site setting",
+    "content_type": 7,
+    "codename": "delete_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view site setting",
+    "content_type": 7,
+    "codename": "view_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add mission block",
+    "content_type": 8,
+    "codename": "add_missionblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change mission block",
+    "content_type": 8,
+    "codename": "change_missionblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete mission block",
+    "content_type": 8,
+    "codename": "delete_missionblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view mission block",
+    "content_type": 8,
+    "codename": "view_missionblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add training category",
+    "content_type": 9,
+    "codename": "add_trainingcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change training category",
+    "content_type": 9,
+    "codename": "change_trainingcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete training category",
+    "content_type": 9,
+    "codename": "delete_trainingcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view training category",
+    "content_type": 9,
+    "codename": "view_trainingcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add training video",
+    "content_type": 10,
+    "codename": "add_trainingvideo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change training video",
+    "content_type": 10,
+    "codename": "change_trainingvideo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete training video",
+    "content_type": 10,
+    "codename": "delete_trainingvideo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view training video",
+    "content_type": 10,
+    "codename": "view_trainingvideo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add side hustle item",
+    "content_type": 11,
+    "codename": "add_sidehustleitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change side hustle item",
+    "content_type": 11,
+    "codename": "change_sidehustleitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete side hustle item",
+    "content_type": 11,
+    "codename": "delete_sidehustleitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view side hustle item",
+    "content_type": 11,
+    "codename": "view_sidehustleitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add roadmap",
+    "content_type": 12,
+    "codename": "add_roadmap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change roadmap",
+    "content_type": 12,
+    "codename": "change_roadmap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete roadmap",
+    "content_type": 12,
+    "codename": "delete_roadmap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view roadmap",
+    "content_type": 12,
+    "codename": "view_roadmap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add step",
+    "content_type": 13,
+    "codename": "add_step"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change step",
+    "content_type": 13,
+    "codename": "change_step"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete step",
+    "content_type": 13,
+    "codename": "delete_step"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view step",
+    "content_type": 13,
+    "codename": "view_step"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add ai tool",
+    "content_type": 14,
+    "codename": "add_aitool"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change ai tool",
+    "content_type": 14,
+    "codename": "change_aitool"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete ai tool",
+    "content_type": 14,
+    "codename": "delete_aitool"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view ai tool",
+    "content_type": 14,
+    "codename": "view_aitool"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add hero image",
+    "content_type": 15,
+    "codename": "add_heroimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change hero image",
+    "content_type": 15,
+    "codename": "change_heroimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete hero image",
+    "content_type": 15,
+    "codename": "delete_heroimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view hero image",
+    "content_type": 15,
+    "codename": "view_heroimage"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$TWivaGBhr6FvwXXapc6uVE$pnKAYSKlQQa9JWAX5AaxtLGCRytkHFAwx+2ugWpfqqA=",
+    "last_login": "2025-11-17T03:59:13.752Z",
+    "is_superuser": true,
+    "username": "yuichihamada",
+    "first_name": "",
+    "last_name": "",
+    "email": "ilovemrchildrensazan@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-19T11:00:00.350Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ZTifGZOvifdXHozIu9DDFj$n0xNIGuQm3yuSrlxHslDRIJ72wq7kiQ61Yr5yultfgQ=",
+    "last_login": "2025-11-01T10:04:41.257Z",
+    "is_superuser": true,
+    "username": "hamadayuichi",
+    "first_name": "",
+    "last_name": "",
+    "email": "ilovemrchildrensazan@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-01T10:04:14.982Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "content",
+    "model": "sitesetting"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "content",
+    "model": "missionblock"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "content",
+    "model": "trainingcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "content",
+    "model": "trainingvideo"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "content",
+    "model": "sidehustleitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "content",
+    "model": "roadmap"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "content",
+    "model": "step"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "content",
+    "model": "aitool"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "content",
+    "model": "heroimage"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2bo0q9vqt4pyce20fifd2goym3pxo69t",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAURP-la0IKlLawdO83NLe9l4cYatpCNMZ_F5TEuJwzZ-bJekhk_MTaFBbKvnGlwFq2FixjJlKMo58N3W9jeLCWbwyWNJglUjAjbuLH-zELbqJ5L_ACc-9z5-cURpvvSn60MT97pOvpcP8OBojDtm5srQRHieiqinNZC6iFLFFagR130Niucx2URaMFYA1KK6rIKqkLS1qU7PUGVcRJmQ:1vKqOs:Gx6y-5ZwlWjs-YZMHBL3C7RQPEzlv9E0hLWHq11ppPk",
+    "expire_date": "2025-11-18T03:59:34.216Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "59jtvqqgxb3hlg9359jc0oqyp5u32cn8",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vDhNK:jzPZF8OJfJTDAH1FJSW_BU_K-2FENhMkWMycS2Ql9AE",
+    "expire_date": "2025-10-29T10:56:26.405Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5ev4tc4kwzvttlylk10cyjd3qqmfcxhx",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vBCA9:g3kzXkgodkg1JOFzbuIvm0qBF7I96aZjW5YlcycFejk",
+    "expire_date": "2025-10-22T13:12:29.866Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a9uru053tc38g1enqon4ldrk2nzpnk6q",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vFus9:VjoAUZcxxmDutrJBH5nh-bwrFSgNaROztLxur70M3ig",
+    "expire_date": "2025-11-04T13:45:25.482Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "moh6a70eucvgpoy62ndax5uvrn12ekfp",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vIqej:E86RjsvGQaL-3ztGDHjUumcitHENggNDc9VAwgzHFmU",
+    "expire_date": "2025-11-12T15:51:41.681Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oyf7uw4pq7bxxg15io2ezp8342n08k49",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBKgYJL956BDMOMVA1NSrsy3l1JutDl_-_lvUSEfStxb7TGOYuz0OL0-yXAB9UO8h3qbZG41G2dk-yKPGiT1yXT83K4f4ECrfQsEtlsFQcypB0T-NENGZxRxOk7lAsBAO3IQSvjA00MNIHxjgdAFO8PBOg40Q:1vF8TR:GPpCVtwK63kDyvzrXssR9k2tly7ebsde_j0XBMTQTCg",
+    "expire_date": "2025-11-02T10:04:41.258Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pktbguavij1fujukudh8eoo47wsth3ph",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJfc2Vzc2lvbl9leHBpcnkiOjAsImdhdGVfdmVyIjoidjEifQ:1vAmRo:yUgPlRs0yGMCWd_rsxbtk98Z57YVZv9SQa7bvt7WzWI",
+    "expire_date": "2025-10-21T09:45:00.628Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qhn9e57o5pn50lx0l5chv9z1f5b58yig",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vE7mn:gr1t1ZhmAT6oNWUer8r9qKdl_1QWIaPvrH0u0Oidfhg",
+    "expire_date": "2025-10-30T15:08:29.051Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sm5sklra1kplogqlkxyj451haxcoomf1",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vGbXe:wZWEYGEojjeGXWR40c7OB7z9ZIyrjxGZCZ4oxYoEnB4",
+    "expire_date": "2025-11-06T11:19:06.654Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wyg02yyonx7anv60anzyxusexwyr88fv",
+  "fields": {
+    "session_data": "eyJnYXRlX29rIjp0cnVlLCJnYXRlX3ZlciI6InYxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ:1vCezV:JCSSws7tI0e7QfuXIaXv7fYIpj7KSyCq-k8oK6HNf8o",
+    "expire_date": "2025-10-26T14:11:33.186Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z2uyv2mo51anmkdk48ty867zzvtz1edf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAURO_Cummg0kC7dO8ZyIf_abGmGKCNxnh3WzUxLufNm3mwAQqZOLG-pIWqT1wpsZ6tglXMZMo5xNnQ7RrSnfV8Y7CU0SyZkgm4iW_vxyy4iea9wDPMQ6xdnEsKtt6V-tvm-hSRLsev-3cwQh63tVccueJKc98JoUEjWIWtRBBIQsu2AynRWzhoYTlC0yngrUOSorGd8-z5AlClSbY:1vKDGt:hHWPEJ4Ny-I7Q_Ewr_hziS_Iix1cgzkHyJZ4hu5ynCs",
+    "expire_date": "2025-11-16T10:12:43.324Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zgqgc4ipguk924cqd2pqhbl4qfecg0mv",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAURO_Cummg0kC7dO8ZyIf_abGmGKCNxnh3WzUxLufNm3mwAQqZOLG-pIWqT1wpsZ6tglXMZMo5xNnQ7RrSnfV8Y7CU0SyZkgm4iW_vxyy4iea9wDPMQ6xdnEsKtt6V-tvm-hSRLsev-3cwQh63tVccueJKc98JoUEjWIWtRBBIQsu2AynRWzhoYTlC0yngrUOSorGd8-z5AlClSbY:1vI8VH:aNzOFpZwDxF3r9H5g2G1nUBcT1QDKmC1FqZR5hH_AkE",
+    "expire_date": "2025-11-10T16:42:59.345Z"
+  }
+},
+{
+  "model": "content.sitesetting",
+  "pk": 1,
+  "fields": {
+    "hero_title": "",
+    "hero_sub": "",
+    "hero_cta_text": "",
+    "hero_cta_link": "",
+    "calendar_embed_src": "https://calendar.google.com/calendar/embed?src=05a3c6c348030f6badb40a3e1c5744eb78a0b795aa62c8b9e85e2e24a6ccbdc2%40group.calendar.google.com&ctz=Asia%2FTokyo"
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 1,
+  "fields": {
+    "name": "マインドセット",
+    "slug": "mindset"
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 2,
+  "fields": {
+    "name": "コンプライアンス",
+    "slug": "compliance"
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 3,
+  "fields": {
+    "name": "事業知識",
+    "slug": "business-basics"
+  }
+},
+{
+  "model": "content.trainingcategory",
+  "pk": 4,
+  "fields": {
+    "name": "クロージング",
+    "slug": "closing"
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 1,
+  "fields": {
+    "title": "WOLFE　チームコンプライアンス研修①",
+    "category": 2,
+    "description": "",
+    "video_url": "https://youtu.be/lJ_vEwd5PyI?si=p9mVNcy9JlqM_kIg",
+    "duration": "7分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 2,
+  "fields": {
+    "title": "WOLFE　チームコンプライアンス研修②",
+    "category": 2,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/lAM-Z6ii00M?si=Z_QwpFGiZnt6JJPn",
+    "duration": "2分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 3,
+  "fields": {
+    "title": "スタートアップ研修",
+    "category": 3,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/IlmDD3dwRu8?si=EGYEZQSONT-S7szk",
+    "duration": "12分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 4,
+  "fields": {
+    "title": "業界初のビジネスモデルとは",
+    "category": 3,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/lP3eqKsvcD8?si=EGnDuYpGX50xJPxe",
+    "duration": "9分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 5,
+  "fields": {
+    "title": "意志 vs 方法",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/2TOAmCyoLtw?si=Fh3rxvg8hW767nWM",
+    "duration": "6分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 6,
+  "fields": {
+    "title": "確認と確信の違い",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/xrY4V4498HE?si=jJsfEGEgm8mH5srS",
+    "duration": "6分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 7,
+  "fields": {
+    "title": "チャンスの掴み方",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/pIxAaa9sDhc?si=TJIqxU-P3uw0Eg-1",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 8,
+  "fields": {
+    "title": "優先順位の決定基準",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/6DejvYENsC8?si=PhUFK2c-9MWLbMhw",
+    "duration": "7分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 9,
+  "fields": {
+    "title": "習慣化のメカニズム",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/Wx2s3jhUer8?si=9DKpefUsL0F5K50e",
+    "duration": "7分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 10,
+  "fields": {
+    "title": "1％の努力",
+    "category": 1,
+    "description": "",
+    "video_url": "https://www.youtube.com/embed/kKRo67MTKac?si=su96BEtwd5_6Btes",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 12,
+  "fields": {
+    "title": "5人の法則",
+    "category": 1,
+    "description": "",
+    "video_url": "https://youtu.be/SrmI3d8_PCM?si=FrsZg9wP9ciPWXPJ",
+    "duration": "6分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 13,
+  "fields": {
+    "title": "「やる理由」の強さ",
+    "category": 1,
+    "description": "",
+    "video_url": "https://youtu.be/FkwzhSa5T4M?si=5rMyW1mfoXpLyvIE",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 14,
+  "fields": {
+    "title": "代価の法則の落とし穴",
+    "category": 1,
+    "description": "",
+    "video_url": "https://youtu.be/tFGDYcUEIqk?si=-dc4ZBblWu1gYbYr",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 15,
+  "fields": {
+    "title": "本当にうまくいく計画の秘訣",
+    "category": 1,
+    "description": "",
+    "video_url": "https://youtu.be/OxP-QuPM1fw?si=LJR1ozZ8vpOmNute",
+    "duration": "5分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 16,
+  "fields": {
+    "title": "【クロージング】ポイントの解説",
+    "category": 4,
+    "description": "",
+    "video_url": "https://youtu.be/6dlBchxNmHQ?si=nA6N-SySz5stUACW",
+    "duration": "10分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.trainingvideo",
+  "pk": 17,
+  "fields": {
+    "title": "【クロージング】魔法の4テクニック",
+    "category": 4,
+    "description": "",
+    "video_url": "https://youtu.be/YicD0uu0zUc?si=e5q4sA56w1zV4f4s",
+    "duration": "9分",
+    "is_public": true
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 1,
+  "fields": {
+    "category": "pocket",
+    "name": "①MNP案件",
+    "summary": "携帯のキャリア契約により発生する、キャッシュバックや特典を利用するお小遣い案件。事前の簡単な準備作業と、半日の店舗での契約作業で完了します。当日も担当者が同行するので安心です。報酬も約1週間で受け取れます。",
+    "reward": "東京 60,000〜100,000円 / 大阪 60,000〜80,000円（交通費の一部を含む）",
+    "pros": "半年に1回できるため、年間12〜20万円程度を狙える高単価案件。担当者同行で初めての方でも取り組みやすい。",
+    "cons": "店舗での手続きに半日ほど時間が必要。日程調整が必須となります。",
+    "link_url": "",
+    "image": "side_hustle/MNP案件イメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 2,
+  "fields": {
+    "category": "pocket",
+    "name": "②モニター案件",
+    "summary": "1時間ほどの面談や資料請求を行うことで報酬が得られるお小遣い案件。対面の案件だけでなく、店舗に行けない方でも在宅で対応できる案件もあります。全国対応可能なので、隙間時間に取り組みやすいのが特徴です。",
+    "reward": "1案件あたり3,000〜8,000円",
+    "pros": "在宅案件もあり、全国どこからでも参加可能。隙間時間でコツコツお小遣いを稼げる。",
+    "cons": "案件数やタイミングによって、継続的に案件があるとは限らない。",
+    "link_url": "",
+    "image": "side_hustle/モニター案件イメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 3,
+  "fields": {
+    "category": "pocket",
+    "name": "③FX口座開設",
+    "summary": "FX口座を新規開設し、契約者に対するキャッシュバックを受け取るお小遣い案件。口座開設手続きは完全オンラインで完結します。",
+    "reward": "1口座あたり 5,000円前後（合計約20,000〜30,000円を想定）",
+    "pros": "オンラインのみで完結するため店舗に行く必要がない。短期間でまとまったお小遣いを得やすい。",
+    "cons": "すでに口座開設済みの会社からはキャッシュバックを受け取れない場合があります。",
+    "link_url": "",
+    "image": "side_hustle/FX口座開設イメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 4,
+  "fields": {
+    "category": "pocket",
+    "name": "④ブランド品 抽選",
+    "summary": "時計などのブランド品を抽選、または訪店により購入し、その商品を業者が高値で買い取るお小遣い案件です。1回で購入できることは稀で、当選・購入できるまで複数回チャレンジする場合があります。購入に関わる費用は業者負担のため持ち出しは0円です。",
+    "reward": "30,000〜500,000円（相場は50,000〜150,000円程度）",
+    "pros": "自己資金の持ち出しなしで高単価の報酬が狙える案件。うまくいけば一回で大きな金額を得られる可能性あり。",
+    "cons": "抽選のため当選・購入できない場合もある。案件実施から報酬受け取りまで時間がかかる可能性があります。",
+    "link_url": "",
+    "image": "side_hustle/ロレックス案件イメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 5,
+  "fields": {
+    "category": "career",
+    "name": "①正社員転職",
+    "summary": "無料でキャリア設計、面接対策、履歴書添削までトータルでサポート。内定率の高い提携先の人材会社のプロが、約10万社の求人から一人ひとりに合った転職先を提案します。理想のキャリアを描きながら、入社祝い金も受け取れます。",
+    "reward": "入社後 約100,000〜500,000円",
+    "pros": "プロのキャリアコンサルタントに無料で相談できる。自分では見つけられない求人を紹介してもらえる可能性が高い。",
+    "cons": "希望条件によっては紹介できる求人が限られる場合がある。選考〜入社まで一定の期間が必要。",
+    "link_url": "",
+    "image": "side_hustle/正社員転職イメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 6,
+  "fields": {
+    "category": "career",
+    "name": "②業務委託・非正規雇用",
+    "summary": "正社員ほどガッツリ長期で働きたくない方向けに、業務委託や非正規雇用の仕事を紹介します。営業職がメインのため、スキルを身に付けたい方や、成果に応じて収入を増やしたい方に適した働き方です。",
+    "reward": "毎月 10,000〜20,000円程度",
+    "pros": "正社員より働き方の自由度が高く、副業や他の活動と両立しやすい。営業スキルなど、市場価値の高いスキルを身に付けやすい。",
+    "cons": "成果や稼働時間によって収入が変動しやすい。社会保険などの条件は案件によって異なります。",
+    "link_url": "",
+    "image": "side_hustle/業務委託非正規雇用イメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 7,
+  "fields": {
+    "category": "career",
+    "name": "③退職サポート",
+    "summary": "退職時の失業手当・再就職手当などについて、細かく無料で解説するサポートです。制度を理解せずに自己都合退職してしまうと、100万円以上損をしてしまうケースもあります。退職を検討している方は、まず相談することをおすすめします。",
+    "reward": "",
+    "pros": "知らないまま退職して損をするリスクを避けられる。自分にとって最適な退職タイミングや手続きを整理できる。",
+    "cons": "",
+    "link_url": "",
+    "image": "side_hustle/退職サホートイメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 8,
+  "fields": {
+    "category": "life",
+    "name": "①お引越しサポート",
+    "summary": "全国対応可能な引越しサポート。仲介手数料最大0円や各種割引など、通常よりもお得な条件での引越しをサポートします。予約不要で、スマホ1つで簡単に連絡・相談ができ、事務的な手間もほとんどありません。",
+    "reward": "仲介手数料の割引・無料化など（実質数万円〜のコスト削減を見込める）",
+    "pros": "引越しの初期費用を大きく抑えられる可能性がある。全国対応で利用しやすい。",
+    "cons": "物件や地域によっては、割引の適用条件が限られる場合がある。",
+    "link_url": "",
+    "image": "side_hustle/引越しサホートイメーシ.png"
+  }
+},
+{
+  "model": "content.sidehustleitem",
+  "pk": 9,
+  "fields": {
+    "category": "life",
+    "name": "②家庭のインフラ見直し",
+    "summary": "電気・ガス・通信など、毎月支払っている固定費を見直すサポートです。電力・ガス・通信の自由化により、格安会社も増えたことで、毎月数千円の節約が見込めます。契約時のキャッシュバックも特別に上乗せ（数千〜数万円）される場合があります。",
+    "reward": "毎月数千円の固定費削減＋契約時キャッシュバック（数千〜数万円）",
+    "pros": "一度見直すと、その後は何もしなくても節約効果が続く。固定費削減分を貯蓄や投資、ビジネス活動に回しやすくなる。",
+    "cons": "プラン変更や乗り換えの手続きが必要。解約金などが発生する場合は事前確認が必要。",
+    "link_url": "",
+    "image": "side_hustle/家庭のインフラ見直しイメーシ.png"
+  }
+},
+{
+  "model": "content.aitool",
+  "pk": 1,
+  "fields": {
+    "name": "教えてアポ取り君",
+    "category": "アポ取り",
+    "intro": "百戦錬磨のアポ取り君が、WOLFEのことやアプローチの仕方など色々教えてくれます",
+    "howto": "",
+    "link_url": "https://chatgpt.com/g/g-68089b28711081918d0cb6cef27ea348-jiao-eteahoqu-rijun",
+    "image": "ai_tools/アホ取り君イメーシ.png"
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 3,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-picture3.jpg",
+    "alt": "",
+    "order": 4,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 4,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-picture4.jpg",
+    "alt": "",
+    "order": 2,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 5,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-picture5.jpg",
+    "alt": "",
+    "order": 5,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 6,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-picture6.jpg",
+    "alt": "",
+    "order": 6,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 7,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-picture7.jpg",
+    "alt": "",
+    "order": 1,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 8,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-picture8.jpg",
+    "alt": "",
+    "order": 3,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+},
+{
+  "model": "content.heroimage",
+  "pk": 9,
+  "fields": {
+    "slot": "home",
+    "image": "hero/wolfe-logo.png",
+    "alt": "",
+    "order": 0,
+    "is_active": true,
+    "start_at": null,
+    "end_at": null
+  }
+}
+]
