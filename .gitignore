@@ -6,7 +6,7 @@ __pycache__/
 
 # Django
 db.sqlite3
-staticfiles/        # collectstatic の出力（本番で生成されるやつ）
+staticfiles/
 *.log
 
 # 環境変数・秘密
