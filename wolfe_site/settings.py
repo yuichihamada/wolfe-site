@@ -24,6 +24,7 @@ INSTALLED_APPS = [
   'django.contrib.messages',
   'django.contrib.staticfiles',
   'content',
+  'storages',
 ]
 
 MIDDLEWARE = [
@@ -69,8 +70,25 @@ STATICFILES_DIRS = [BASE_DIR / 'content' / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+USE_R2 = env.bool("USE_R2", default=False)
+
+if USE_R2:
+    # ==== Cloudflare R2（S3互換） ====
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+    AWS_ACCESS_KEY_ID = env("R2_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = env("R2_SECRET_ACCESS_KEY")
+    AWS_STORAGE_BUCKET_NAME = env("R2_BUCKET_NAME")
+
+    AWS_S3_ENDPOINT_URL = env("R2_ENDPOINT_URL")
+    AWS_S3_REGION_NAME = "auto"
+    AWS_S3_ADDRESSING_STYLE = "path"
+
+    MEDIA_URL = env("R2_MEDIA_URL")
+else:
+    # ローカル開発用
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

@@ -1,30 +1,44 @@
+# ======================
 # Python
+# ======================
 .venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
 
+# ======================
 # Django
+# ======================
 db.sqlite3
 staticfiles/
+media/
 *.log
 
-# 環境変数・秘密
+# ======================
+# Secrets
+# ======================
 .env
+.ssh/
+*.pem
+*.key
 
-# Node/フロント（将来Vite/Nextを入れる可能性を先取り）
+# ======================
+# Node & Frontend (Next.js/Vite)
+# ======================
 node_modules/
 dist/
 .next/
 .turbo/
 pnpm-lock.yaml
-package-lock.json
 yarn.lock
+package-lock.json
 
-# OS 系
+# ======================
+# OS files
+# ======================
 .DS_Store
 
-# Security
-.ssh/
-*.pem
-*.key
+# ======================
+# Testing (optional)
+# ======================
+.pytest_cache/
