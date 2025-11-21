@@ -2,17 +2,27 @@
 {% block title %}研修動画 - WOLFE Connect{% endblock %}
 {% block content %}
 <section class="max-w-6xl mx-auto px-4 py-12">
-  <div class="flex items-center gap-3 mb-6">
-  <h2 class="text-2xl font-semibold">研修動画</h2>
-    <form method="get" class="ml-auto flex gap-2">
-      <select name="category" class="border rounded px-2 py-1">
-        <option value="">すべて</option>
-        {% for c in categories %}
-          <option value="{{ c.slug }}" {% if current == c.slug %}selected{% endif %}>{{ c.name }}</option>
-        {% endfor %}
-      </select>
-      <button class="px-3 py-1 border rounded">絞り込む</button>
-    </form>
+  <div class="mb-6">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <!-- タイトル -->
+      <h2 class="text-2xl font-semibold whitespace-nowrap">
+        研修動画
+      </h2>
+      <!-- カテゴリ絞り込みフォーム -->
+      <form method="get" class="flex gap-2 flex-nowrap md:ml-auto">
+        <select name="category" class="border rounded px-2 py-1">
+          <option value="">すべて</option>
+          {% for c in categories %}
+            <option value="{{ c.slug }}" {% if current == c.slug %}selected{% endif %}>
+              {{ c.name }}
+            </option>
+          {% endfor %}
+        </select>
+        <button class="px-3 py-1 border rounded whitespace-nowrap">
+          絞り込む
+        </button>
+      </form>
+    </div>
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
