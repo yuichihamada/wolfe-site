@@ -1,17 +1,212 @@
 {% extends 'base.html' %}
-{% block title %}ミッション - WOLFE Connect{% endblock %}
+{% block title %}REBIRTHとは - WOLFE Connect{% endblock %}
+
 {% block content %}
-<section class="max-w-4xl mx-auto px-4 py-12">
-  <h2 class="text-2xl font-semibold mb-6">チームの理念・ミッション・バリュー</h2>
-  <div class="space-y-6">
-    {% for b in blocks %}
-      <article class="bg-white rounded p-5 border">
-        <h3 class="font-semibold mb-2">{{ b.title }}</h3>
-        <div class="prose max-w-none">{{ b.body|linebreaks }}</div>
-      </article>
-    {% empty %}
-      <p>準備中です。</p>
-    {% endfor %}
+
+<!-- Hero -->
+<section class="bg-black text-white border-b-4 border-red-600">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-red-600 text-xs font-semibold tracking-widest uppercase">
+        TEAM REBIRTH
+      </span>
+      <span class="text-xs text-gray-400 tracking-widest uppercase">
+        WOLFE BUSINESS
+      </span>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-3">
+      REBIRTH（リバース）
+    </h1>
+
+    <p class="text-lg md:text-xl mb-4">
+      <span class="text-red-500 font-semibold tracking-widest uppercase">
+        All In, All Win.
+      </span>
+    </p>
+
+    <p class="max-w-2xl text-sm md:text-base text-gray-300 leading-relaxed">
+      「生まれ変わる」ことを合言葉に、WOLFEビジネスで本気で成功を掴みにいく仲間のチーム。<br class="hidden md:block">
+      全員主役、全員勝者の“REBIRTH FAMILY”です。
+    </p>
   </div>
 </section>
+
+
+<!-- Main Body -->
+<section class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+
+  <!-- 1. Team Name -->
+  <section>
+    <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-700 text-sm font-bold">1</span>
+      チーム名と由来
+    </h2>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 space-y-4">
+      <div>
+        <p class="text-sm font-semibold text-red-600 mb-1">✨ チーム名</p>
+        <p class="text-lg font-bold text-gray-900">
+          REBIRTH（リバース）
+          <span class="text-sm font-normal text-gray-500 ml-2">
+            ― “生まれ変わる” ―
+          </span>
+        </p>
+      </div>
+
+      <p class="text-gray-700 text-sm md:text-base">
+        「REBIRTH」とは、“生まれ変わる”という意味。<br>
+        WOLFEビジネスで<strong>本気で成功を掴みにいく仲間</strong>のチーム名です。
+      </p>
+
+      <div class="bg-red-50 border border-red-100 rounded-md p-4 text-sm md:text-base">
+        <p class="font-semibold text-red-700 mb-1">チーム名に込めたストーリー</p>
+        <p class="text-gray-800">
+          この名前は、かつて千葉さんがMLM時代に率いた伝説のチーム名でもあります。<br>
+          その魂を、僕たちが（勝手に）引き継ぎ、名前を（勝手に）譲り受けました😳（笑）
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Reason -->
+  <section>
+    <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-700 text-sm font-bold">2</span>
+      生まれ変わる理由
+    </h2>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 space-y-4 text-sm md:text-base text-gray-800">
+      <p>
+        全員が幸せに満ち溢れ、何の悩みもなく生きてきた人なんて、きっといない。
+      </p>
+      <p>
+        むしろ、
+        <span class="font-semibold">「悔しさ」「不安」「劣等感」「苦しさ」</span>
+        そんな想いを抱えて、
+      </p>
+      <ul class="list-disc list-inside ml-1 mb-2">
+        <li>「何かを変えたい」</li>
+        <li>「幸せになりたい」</li>
+      </ul>
+      <p>
+        と願って、このWOLFEに参加した仲間ばかりだと思います。
+      </p>
+
+      <p>
+        自分のために、家族のために、大切な人のために。<br>
+        皆さんが<strong>幸せで、夢と愛で溢れた人生</strong>を送るために…
+      </p>
+
+      <p class="text-base md:text-lg font-extrabold text-red-600 tracking-wide">
+        全員で勝利を掴む！！！
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Definition -->
+  <section>
+    <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-700 text-sm font-bold">3</span>
+      REBIRTHとは
+    </h2>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 space-y-4 text-sm md:text-base text-gray-800">
+      <p>REBIRTHとは、ただ「新しい自分になる」ことだけではありません。</p>
+
+      <ul class="list-disc list-inside ml-1 space-y-1">
+        <li>仲間と共に、生まれ変わること。</li>
+        <li>全員で勝利を掴み取ること。</li>
+      </ul>
+
+      <p class="mt-2">
+        1人ではできないことも、仲間となら、必ずできる。<br>
+        勝ちたいという気持ちも、夢を叶えたいという想いも、
+      </p>
+
+      <p class="font-semibold text-red-500">
+        互いを信じ、自分を信じる力から生まれる。
+      </p>
+    </div>
+  </section>
+
+  <!-- 4. Values -->
+  <section>
+    <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-700 text-sm font-bold">4</span>
+      REBIRTH FAMILY の在り方
+    </h2>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 space-y-4 text-sm md:text-base text-gray-800">
+      <p class="font-semibold text-gray-900">
+        全員が主役で、全員が勝者。
+      </p>
+
+      <ul class="list-disc list-inside ml-1 space-y-1">
+        <li>誰かが苦しむ時は、全員で支える。</li>
+        <li>誰かが成功した時は、全員で喜ぶ。</li>
+      </ul>
+
+      <p class="mt-2 font-extrabold text-red-600">
+        それが、REBIRTHファミリーの在り方🔥
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. Slogan -->
+  <section>
+    <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-700 text-sm font-bold">5</span>
+      スローガン「All In, All Win.」
+    </h2>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 space-y-3 text-sm md:text-base text-gray-800">
+      <p class="text-lg md:text-xl font-extrabold text-red-600 tracking-widest uppercase">
+        All In, All Win.
+      </p>
+
+      <p>この言葉は、REBIRTHの約束であり、チームの核。</p>
+
+      <ul class="list-disc list-inside ml-1 space-y-1">
+        <li>仲間のために本気になれること。</li>
+        <li>チームの夢を「自分の夢」として追えること。</li>
+        <li>勝利を「みんなのもの」として分かち合えること。</li>
+      </ul>
+
+      <p>
+        誰かを蹴落として勝つ集団じゃない。<br>
+        <strong>全員で勝つために挑戦し続けるチーム。</strong><br>
+        <strong>全員で幸せになるために本気になれるファミリー。</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- 6. Footer -->
+  <section class="pt-4 border-t border-gray-200">
+    <div class="text-center space-y-2">
+      <p class="text-sm uppercase tracking-widest text-gray-500">REBIRTH（リバース）</p>
+      <p class="text-lg md:text-xl font-bold text-gray-900">― All In, All Win. ―</p>
+      <p class="text-sm md:text-base text-gray-600">全員主役、全員勝者。</p>
+    </div>
+  </section>
+
+  <!-- Optional mission blocks -->
+  {% if blocks %}
+    <section class="pt-10 border-t border-gray-200">
+      <h2 class="text-lg font-semibold mb-4 text-gray-900">ミッション・バリュー詳細</h2>
+      <div class="space-y-4">
+        {% for b in blocks %}
+          <article class="bg-white rounded-lg border border-gray-200 p-4">
+            <h3 class="font-semibold mb-2 text-gray-900">{{ b.title }}</h3>
+            <div class="prose max-w-none text-sm md:text-base text-gray-800">
+              {{ b.body|linebreaks }}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+</section>
+
 {% endblock %}
