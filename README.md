@@ -1,4 +1,4 @@
-# WOLFE Connect Site (Django)
+# REBIRTH Connect Site (Django)
 
 ## 1) セットアップ
 ```bash
