@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
   SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, Step, AITool, HeroImage
+  SideHustleItem, Roadmap, Step, AITool, HeroImage, News
 )
 
 @admin.register(SiteSetting)
@@ -48,3 +48,10 @@ class HeroImageAdmin(admin.ModelAdmin):
     list_filter = ("slot", "is_active")
     search_fields = ("alt",)
     ordering = ("slot", "order", "id")
+
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ("title", "category", "created_at", "is_pinned")
+    list_filter = ("category", "is_pinned", "created_at")
+    search_fields = ("title", "body")
+    prepopulated_fields = {"slug": ("title",)}

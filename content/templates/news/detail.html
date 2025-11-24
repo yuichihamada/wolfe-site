@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ item.title }} - 最新情報{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto px-4 py-10">
+
+  <p class="text-sm text-gray-500 mb-4">
+    {{ item.get_category_display }}｜{{ item.created_at|date:"Y/m/d" }}
+  </p>
+
+  <h1 class="text-2xl font-bold mb-6">{{ item.title }}</h1>
+
+  <article class="prose prose-neutral [--tw-prose-links:#2563eb]">
+    <div class="flex items-center gap-2 text-[11px] mb-2">
+      {% if item.is_pinned %}
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-red-600 text-white font-semibold">
+          重要
+        </span>
+      {% endif %}
+      {% if item.is_new %}
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+          NEW
+        </span>
+      {% endif %}
+    </div>
+    {{ item.body|urlize|linebreaksbr }}
+  </article>
+
+  <a href="{% url 'news_list' %}" class="inline-block mt-8 text-blue-600 underline">
+    ← 最新情報一覧に戻る
+  </a>
+
+</section>
+{% endblock %}

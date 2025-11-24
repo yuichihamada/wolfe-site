@@ -4,6 +4,28 @@
 
 {% block content %}
 
+<!-- オープンチャット案内バー -->
+<section class="bg-emerald-50 border-b border-emerald-200">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-sm">
+    <div class="flex-1">
+      <p class="font-semibold text-emerald-900">
+        副業の詳細やお知らせは、オープンチャットで配信します
+        <span class="ml-1 text-xs md:text-[11px] text-emerald-700">【WOLFE会員チーム限定】</span>
+      </p>
+      <p class="text-xs text-emerald-800 mt-0.5">
+        参加にはパスワードが必要です：<span class="font-mono tracking-wider font-semibold">wolfe</span>
+      </p>
+    </div>
+    <div class="md:text-right">
+      <a href="https://line.me/ti/g2/czA8KrOxa80KZpXCx3Kj5oGQF2z5S6_ddH0kDg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+         target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-emerald-600 text-white text-xs md:text-sm font-semibold hover:bg-emerald-700">
+        オープンチャットに参加する
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Hero -->
 <section class="relative h-64 md:h-80 mb-10 overflow-hidden">
   <img src="{% static 'images/副業コミュニティイメージ.png' %}"

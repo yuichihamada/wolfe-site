@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
-from urllib.parse import urlparse, parse_qs
+from datetime import timedelta
+from django.utils import timezone
 
 class SiteSetting(models.Model):
   hero_title = models.CharField(max_length=120, blank=True)
@@ -150,3 +151,36 @@ class HeroImage(models.Model):
     def __str__(self):
         base = self.alt or self.image.name
         return f"{self.get_slot_display()} | {base} ({'ON' if self.is_active else 'OFF'})"
+
+class News(models.Model):
+    CATEGORY_CHOICES = [
+        ("info", "会社情報"),
+        ("training", "研修"),
+        ("event", "イベント"),
+        ("others", "その他"),
+    ]
+
+    title = models.CharField(max_length=200)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_pinned = models.BooleanField(default=False, help_text="固定表示")
+    slug = models.SlugField(unique=True, blank=True)
+
+    class Meta:
+        ordering = ["-is_pinned", "-created_at"]
+    
+    def is_new(self):
+        """作成から7日以内なら新着扱い"""
+        if not self.created_at:
+            return False
+        return self.created_at >= timezone.now() - timedelta(days=7)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            from django.utils.text import slugify
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title

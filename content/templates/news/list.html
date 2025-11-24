@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}最新情報 - WOLFE Connect{% endblock %}
+
+{% block content %}
+<section class="max-w-5xl mx-auto px-4 py-10">
+
+  <div class="flex flex-col md:flex-row md:items-center gap-3 mb-6">
+    <h1 class="text-3xl font-bold">最新情報</h1>
+
+    <form method="get" class="md:ml-auto flex gap-2 items-center">
+      <input
+        type="text"
+        name="q"
+        value="{{ q }}"
+        placeholder="キーワード検索（例：研修, 合宿, Zoom）"
+        class="border rounded px-3 py-1 text-sm w-52 md:w-72"
+      >
+
+      <select name="category" class="border rounded px-2 py-1 text-sm">
+        <option value="">すべて</option>
+        <option value="notice" {% if category == "info" %}selected{% endif %}>会社情報</option>
+        <option value="training" {% if category == "training" %}selected{% endif %}>研修</option>
+        <option value="event" {% if category == "event" %}selected{% endif %}>イベント</option>
+        <option value="event" {% if category == "others" %}selected{% endif %}>その他</option>
+      </select>
+
+      <button class="border rounded px-3 py-1 text-sm bg-black text-white">
+        絞り込む
+      </button>
+    </form>
+  </div>
+
+  <div class="space-y-4">
+    {% for n in news %}
+      <article class="p-3 border rounded-lg bg-white shadow-sm hover:shadow-md transition">
+
+        <!-- バッジ -->
+        <div class="flex items-center gap-1 text-[10px] mb-1">
+          {% if n.is_pinned %}
+            <span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-red-600 text-white">
+              重要
+            </span>
+          {% endif %}
+          {% if n.is_new %}
+            <span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-emerald-500 text-white">
+              NEW
+            </span>
+          {% endif %}
+        </div>
+
+        <!-- カテゴリ & 日付 -->
+        <p class="text-[11px] text-gray-500 mb-0.5">
+          {{ n.get_category_display }} ｜ {{ n.created_at|date:"Y/m/d" }}
+        </p>
+
+        <!-- タイトル -->
+        <h2 class="text-base font-semibold leading-tight mb-1">
+          <a href="{% url 'news_detail' n.slug %}" class="hover:underline">
+            {{ n.title }}
+          </a>
+        </h2>
+
+        <!-- 本文プレビュー（1行だけ） -->
+        <p class="text-xs text-gray-600 line-clamp-1 mb-1">
+          {{ n.body|linebreaksbr|striptags|truncatechars:60 }}
+        </p>
+
+        <!-- 詳細リンク -->
+        <a href="{% url 'news_detail' n.slug %}" class="text-xs text-blue-600 underline">
+          詳細 →
+        </a>
+
+      </article>
+    {% endfor %}
+  </div>
+
+
+</section>
+{% endblock %}

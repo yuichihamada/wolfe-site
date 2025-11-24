@@ -12,4 +12,6 @@ urlpatterns = [
   path('calendar/', views.calendar, name='calendar'),
   path('gate/', views.gate, name='gate'),
   path('gate/logout/', views.gate_logout, name='gate_logout'),
+  path("news/", views.news_list, name="news_list"),
+  path("news/<slug:slug>/", views.news_detail, name="news_detail"),
 ]

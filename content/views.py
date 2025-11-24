@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import (
   SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, AITool, HeroImage
+  SideHustleItem, Roadmap, AITool, HeroImage, News
 )
 import secrets
 import unicodedata
@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.utils import timezone
+from datetime import timedelta
 
 def get_setting():
   return SiteSetting.objects.first()
@@ -69,6 +70,34 @@ def ai_tools(request):
 def calendar(request):
   s = get_setting()
   return render(request, 'content/calendar.html', {'s': s})
+
+def news_list(request):
+    q = request.GET.get("q", "").strip()
+    category = request.GET.get("category", "")
+
+    news = News.objects.all()
+
+    # キーワード検索（タイトル＋本文）
+    if q:
+        news = news.filter(
+            Q(title__icontains=q) |
+            Q(body__icontains=q)
+        )
+
+    # カテゴリ絞り込み（あれば）
+    if category:
+        news = news.filter(category=category)
+
+    context = {
+        "news": news,
+        "q": q,
+        "category": category,
+    }
+    return render(request, "news/list.html", context)
+
+def news_detail(request, slug):
+    item = News.objects.get(slug=slug)
+    return render(request, "news/detail.html", {"item": item})
 
 def _norm_bytes(s: str) -> bytes:
     # NFC 正規化してから UTF-8 で bytes 化
