@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import (
-  SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
+  Calendar, MissionBlock, TrainingCategory, TrainingVideo,
   SideHustleItem, Roadmap, AITool, HeroImage, News
 )
 import secrets
@@ -11,9 +11,12 @@ from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.utils import timezone
 from datetime import timedelta
+from .forms import QuestionForm
+from .models import Question, FaqEntry
+
 
 def get_setting():
-  return SiteSetting.objects.first()
+  return Calendar.objects.first()
 
 def home(request):
   s = get_setting()
@@ -98,6 +101,24 @@ def news_list(request):
 def news_detail(request, slug):
     item = News.objects.get(slug=slug)
     return render(request, "news/detail.html", {"item": item})
+
+def question_box(request):
+    if request.method == "POST":
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "送信ありがとうございます！")
+            return redirect("question_box")
+    else:
+        form = QuestionForm()
+
+    public_faqs = FaqEntry.objects.filter(is_published=True)
+
+    context = {
+        "form": form,
+        "public_faqs": public_faqs,
+    }
+    return render(request, "content/question_box.html", context)
 
 def _norm_bytes(s: str) -> bytes:
     # NFC 正規化してから UTF-8 で bytes 化

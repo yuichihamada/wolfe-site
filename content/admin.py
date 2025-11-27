@@ -1,17 +1,12 @@
 from django.contrib import admin
 from .models import (
-  SiteSetting, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, Step, AITool, HeroImage, News
+  Calendar, TrainingCategory, TrainingVideo,
+  SideHustleItem, Roadmap, Step, AITool, HeroImage, News, Question, FaqEntry
 )
 
-@admin.register(SiteSetting)
-class SiteSettingAdmin(admin.ModelAdmin):
+@admin.register(Calendar)
+class CalendarAdmin(admin.ModelAdmin):
   list_display = ("hero_title", "calendar_embed_src")
-
-@admin.register(MissionBlock)
-class MissionBlockAdmin(admin.ModelAdmin):
-  list_display = ("title", "order",)
-  list_editable = ("order",)
 
 @admin.register(TrainingCategory)
 class TrainingCategoryAdmin(admin.ModelAdmin):
@@ -55,3 +50,34 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ("category", "is_pinned", "created_at")
     search_fields = ("title", "body")
     prepopulated_fields = {"slug": ("title",)}
+
+
+@admin.register(Question)
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ("display_name", "category", "short_body", "status", "faq_entry", "created_at")
+    list_filter = ("category", "status", "created_at", "faq_entry")
+    search_fields = ("name", "body")
+    readonly_fields = ("created_at",)
+
+    fieldsets = (
+        ("投稿内容", {
+            "fields": ("name", "category", "body"),
+        }),
+        ("対応状況", {
+            "fields": ("status", "faq_entry"),
+        }),
+        ("メタ情報", {
+            "fields": ("created_at",),
+        }),
+    )
+
+    def short_body(self, obj):
+        return (obj.body[:40] + "…") if len(obj.body) > 40 else obj.body
+    short_body.short_description = "内容（抜粋）"
+
+
+@admin.register(FaqEntry)
+class FaqEntryAdmin(admin.ModelAdmin):
+    list_display = ("question_text", "category", "is_published", "created_at")
+    list_filter = ("category", "is_published", "created_at")
+    search_fields = ("question_text", "answer")

@@ -1,6 +1,6 @@
 [
 {
-  "model": "content.sitesetting",
+  "model": "content.Calendar",
   "pk": 1,
   "fields": {
     "hero_title": "",

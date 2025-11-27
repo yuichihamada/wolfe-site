@@ -18,46 +18,100 @@
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between relative">
       <a href="/" class="font-semibold text-lg">REBIRTH Connect</a>
 
-      <!-- PC用ナビ（右寄せ・横並び・gap-4） -->
-      <nav class="hidden md:flex gap-4 text-sm ml-auto">
+      <!-- PCナビ -->
+      <nav class="hidden md:flex gap-4 text-sm ml-auto items-center">
+
         <a href="/mission/" class="hover:underline">ミッション</a>
-        <a href="/training/" class="hover:underline">研修</a>
+
+        <!-- ▼ PC: 研修ドロップダウン（クリックで開閉） -->
+        <div class="relative">
+          <button
+            id="pcTrainingBtn"
+            type="button"
+            class="hover:underline flex items-center gap-1 py-1"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            研修
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- ドロップダウン -->
+          <div
+            id="pcTrainingMenu"
+            class="hidden absolute top-full left-0 bg-white border rounded shadow-md py-2
+                   w-40 text-sm z-50"
+          >
+            <a href="/training/" class="block px-4 py-2 hover:bg-gray-100">研修動画</a>
+            <a href="/roadmaps/" class="block px-4 py-2 hover:bg-gray-100">ロードマップ</a>
+          </div>
+        </div>
+
+        <a href="/calendar/" class="hover:underline">スケジュール</a>
         <a href="/news/" class="hover:underline">最新情報</a>
-        <a href="/side-hustle/" class="hover:underline">副業紹介</a>
-        <a href="/roadmaps/" class="hover:underline">ロードマップ</a>
+        <a href="/side-hustle/" class="hover:underline">副業コミュニティ</a>
         <a href="/ai-tools/" class="hover:underline">AIツール</a>
-        <a href="/calendar/" class="hover:underline">カレンダー</a>
+        <a href="/question-box/" class="hover:underline">相談BOX</a>
       </nav>
 
-      <!-- ハンバーガー（md未満のみ） -->
+      <!-- ▼ ハンバーガー -->
       <button id="menuBtn"
               class="md:hidden inline-flex items-center justify-center p-2 rounded border text-gray-700 ml-auto"
               aria-controls="mobileNav" aria-expanded="false" aria-label="メニューを開閉">
-        <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg id="iconOpen" class="h-5 w-5" fill="none" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg id="iconClose" class="h-5 w-5 hidden" fill="none" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      <!-- モバイル用パネル（フェード＋スライドで開閉、PCでは非表示） -->
+
+      <!-- ▼ モバイルナビ -->
       <div id="mobileNav"
           class="md:hidden absolute left-0 right-0 top-full z-50
                   bg-white border-t shadow
                   overflow-hidden origin-top transform-gpu
                   max-h-0 opacity-0 -translate-y-2 pointer-events-none
                   transition-all duration-200 ease-out">
+
         <nav class="flex flex-col text-sm p-4 space-y-1">
-          <a href="/mission/" class="block hover:underline py-2">ミッション</a>
-          <a href="/training/" class="block hover:underline py-2">研修</a>
-          <a href="/news/" class="block hover:underline py-2">最新情報</a>
-          <a href="/side-hustle/" class="block hover:underline py-2">副業紹介</a>
-          <a href="/roadmaps/" class="block hover:underline py-2">ロードマップ</a>
-          <a href="/ai-tools/" class="block hover:underline py-2">AIツール</a>
-          <a href="/calendar/" class="block hover:underline py-2">カレンダー</a>
+
+          <a href="/mission/" class="block py-2">ミッション</a>
+
+          <!-- ▼ スマホ: 研修アコーディオン -->
+          <button id="mobileTrainingBtn" class="w-full text-left py-2 flex items-center justify-between">
+            <span>研修</span>
+            <svg id="mobileTrainingIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor">
+              <path d="M5 8l4 4 4-4" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- 開閉部分 -->
+          <div id="mobileTrainingPanel" class="ml-3 border-l pl-3 space-y-1 hidden">
+            <a href="/training/" class="block py-2">研修動画</a>
+            <a href="/roadmaps/" class="block py-2">ロードマップ</a>
+          </div>
+
+          <a href="/calendar/" class="block py-2">スケジュール</a>
+          <a href="/news/" class="block py-2">最新情報</a>
+          <a href="/side-hustle/" class="block py-2">副業コミュニティ</a>
+          <a href="/ai-tools/" class="block py-2">AIツール</a>
+          <a href="/question-box/" class="block py-2">相談BOX</a>
         </nav>
       </div>
     </div>
@@ -74,6 +128,7 @@
           crossorigin="anonymous"></script>
   
   <script>
+    /* --- モバイル メインメニューの制御 --- */
     (function () {
       const btn = document.getElementById('menuBtn');
       const panel = document.getElementById('mobileNav');
@@ -98,11 +153,70 @@
         expanded ? closePanel() : openPanel();
       });
 
-      // 画面幅がmd以上になったらパネルは常に閉じる（PCは別ナビを表示）
       const mq = window.matchMedia('(min-width: 768px)');
       function sync(e){ if (e.matches) closePanel(); }
       sync(mq);
-      mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+      mq.addEventListener('change', sync);
+    })();
+
+
+    /* --- モバイル: 研修アコーディオン --- */
+    (function () {
+      const btn = document.getElementById('mobileTrainingBtn');
+      const panel = document.getElementById('mobileTrainingPanel');
+      const icon = document.getElementById('mobileTrainingIcon');
+
+      btn?.addEventListener('click', () => {
+        const isOpen = !panel.classList.contains('hidden');
+        if (isOpen) {
+          panel.classList.add('hidden');
+          icon.style.transform = "rotate(0deg)";
+        } else {
+          panel.classList.remove('hidden');
+          icon.style.transform = "rotate(180deg)";
+        }
+      });
+    })();
+
+    /* --- PC: 研修ドロップダウン（クリックで開閉） --- */
+    (function () {
+      const btn = document.getElementById('pcTrainingBtn');
+      const menu = document.getElementById('pcTrainingMenu');
+      if (!btn || !menu) return;
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();  // 他のクリックイベントに伝播させない
+        const isOpen = !menu.classList.contains('hidden');
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      // メニューの外をクリックしたら閉じる
+      document.addEventListener('click', (e) => {
+        if (menu.classList.contains('hidden')) return;
+        if (!menu.contains(e.target) && e.target !== btn) {
+          closeMenu();
+        }
+      });
+
+      // 画面幅がmd未満になったら強制的に閉じておく（スマホでは別UIを使うため）
+      const mq = window.matchMedia('(max-width: 767px)');
+      function sync(e) {
+        if (e.matches) {
+          closeMenu();
+        }
+      }
+      sync(mq);
+      mq.addEventListener('change', sync);
     })();
   </script>
 

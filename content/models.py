@@ -2,8 +2,11 @@ from django.db import models
 from django.utils.text import slugify
 from datetime import timedelta
 from django.utils import timezone
+from django.contrib.auth import get_user_model
 
-class SiteSetting(models.Model):
+User = get_user_model()
+
+class Calendar(models.Model):
   hero_title = models.CharField(max_length=120, blank=True)
   hero_sub = models.CharField(max_length=200, blank=True)
   hero_cta_text = models.CharField(max_length=50, blank=True)
@@ -184,3 +187,95 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+class FaqEntry(models.Model):
+    CATEGORY_CHOICES = [
+        ("apoint", "アポイント"),
+        ("knowledge", "WOLFE事業知識"),
+        ("sidejob", "副業コミュニティ"),
+        ("request", "意見・要望"),
+        ("other", "その他"),
+    ]
+
+    category = models.CharField(
+        "カテゴリ",
+        max_length=20,
+        choices=CATEGORY_CHOICES,
+        default="other",
+    )
+    
+    question_text = models.TextField(
+        "Q&Aの質問内容（1つ or 複数の質問をまとめた要約）",
+        help_text="複数の質問をまとめる場合は要約文でOKです。",
+    )
+    
+    answer = models.TextField("回答内容")
+
+    is_published = models.BooleanField(
+        "サイトに公開する",
+        default=True,
+    )
+
+    created_at = models.DateTimeField("作成日時", auto_now_add=True)
+    updated_at = models.DateTimeField("更新日時", auto_now=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+
+    def __str__(self):
+        return self.question_text[:30] + "…" if len(self.question_text) > 30 else self.question_text
+
+
+class Question(models.Model):
+    CATEGORY_CHOICES = FaqEntry.CATEGORY_CHOICES
+
+    STATUS_CHOICES = [
+        ("new", "未回答"),
+        ("answered_private", "個別対応済み"),
+        ("answered_public", "Q&Aで回答済み"),
+        ("no_action", "対応不要"),
+    ]
+
+    name = models.CharField(
+        "お名前",
+        max_length=50,
+        blank=True,
+        help_text="匿名で投稿したい場合は空欄でOKです。",
+    )
+
+    category = models.CharField(
+        "カテゴリ",
+        max_length=20,
+        choices=CATEGORY_CHOICES,
+        default="apoint",
+    )
+
+    body = models.TextField("内容（質問・相談・ご意見など）")
+
+    status = models.CharField(
+        "対応ステータス",
+        max_length=20,
+        choices=STATUS_CHOICES,
+        default="new",
+    )
+
+    # この質問が、どのQ&Aでカバーされているか（されていない場合は空欄）
+    faq_entry = models.ForeignKey(
+        FaqEntry,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name="紐づくQ&A",
+        related_name="questions",
+    )
+
+    created_at = models.DateTimeField("投稿日時", auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+
+    def display_name(self):
+        return self.name or "匿名"
+
+    def __str__(self):
+        return f"{self.get_category_display()}（{self.display_name()}）"
