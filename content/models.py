@@ -160,6 +160,7 @@ class News(models.Model):
         ("info", "会社情報"),
         ("training", "研修"),
         ("event", "イベント"),
+        ("site", "サイト"),
         ("others", "その他"),
     ]
 
