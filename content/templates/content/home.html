@@ -7,11 +7,7 @@
     <div>
       <h1 class="text-3xl font-bold mb-3">{{ s.hero_title|default:"あなたのWOLFE活動をもっと快適に。" }}</h1>
       <p class="text-gray-600 mb-6">{{ s.hero_sub|default:"REBIRTHメンバーのための総合プラットフォーム" }}</p>
-      {% if s.hero_cta_text and s.hero_cta_link %}
-        <a href="{{ s.hero_cta_link }}" class="inline-block bg-black text-white px-5 py-3 rounded">{{ s.hero_cta_text }}</a>
-      {% else %}
-        <a href="/training/" class="inline-block bg-black text-white px-5 py-3 rounded">研修を見る</a>
-      {% endif %}
+      <a href="/roadmap/" class="inline-block bg-black text-white px-5 py-3 rounded">研修を見る</a>
     </div>
     <div id="hero-fader"
         class="aspect-video relative bg-black rounded overflow-hidden"

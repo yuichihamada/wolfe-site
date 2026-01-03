@@ -1,12 +1,18 @@
 from django.contrib import admin
 from .models import (
   Calendar, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, Step, AITool, HeroImage, News, Question, FaqEntry
+  SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage, News, Question, FaqEntry
 )
 
 @admin.register(Calendar)
 class CalendarAdmin(admin.ModelAdmin):
   list_display = ("hero_title", "calendar_embed_src")
+  fields = (
+      "hero_title",
+      "hero_sub",
+      "calendar_embed_src",
+      "roadmap_cover_image",
+  )
 
 @admin.register(TrainingCategory)
 class TrainingCategoryAdmin(admin.ModelAdmin):
@@ -22,14 +28,64 @@ class TrainingVideoAdmin(admin.ModelAdmin):
 class SideHustleItemAdmin(admin.ModelAdmin):
   list_display = ("name", "link_url")
 
-class StepInline(admin.TabularInline):
-  model = Step
-  extra = 1
+class RoadmapPageInline(admin.TabularInline):
+    model = RoadmapPage
+    extra = 1
+    fields = (
+        "order",
+        "title",
+        "slug",
+        "is_published",
+    )
+    ordering = ("order",)
+    
+    prepopulated_fields = {
+        "slug": ("title",),
+    }
 
 @admin.register(Roadmap)
 class RoadmapAdmin(admin.ModelAdmin):
-  prepopulated_fields = {"slug": ("name",)}
-  inlines = [StepInline]
+    list_display = ("order", "name")
+    ordering = ("order",)
+    prepopulated_fields = {"slug": ("name",)}
+    search_fields = ("name", "summary")
+
+    fieldsets = (
+        ("基本情報（STEP）", {
+            "fields": ("order", "name", "slug"),
+        }),
+        ("説明", {
+            "fields": ("summary",),
+        }),
+    )
+
+    inlines = [
+        RoadmapPageInline,  # ← PDF相当（主役）
+    ]
+
+@admin.register(RoadmapPage)
+class RoadmapPageAdmin(admin.ModelAdmin):
+    list_display = (
+        "title",
+        "roadmap",
+        "order",
+        "is_published",
+    )
+    list_filter = ("roadmap", "is_published")
+    search_fields = ("title", "body")
+    ordering = ("roadmap", "order")
+
+    prepopulated_fields = {"slug": ("title",)}
+    
+    fields = (
+        "roadmap",
+        "order",
+        "title",
+        "slug",
+        "cover_image",
+        "body",
+        "is_published",
+    )
 
 @admin.register(AITool)
 class AIToolAdmin(admin.ModelAdmin):

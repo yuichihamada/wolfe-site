@@ -9,9 +9,14 @@ User = get_user_model()
 class Calendar(models.Model):
   hero_title = models.CharField(max_length=120, blank=True)
   hero_sub = models.CharField(max_length=200, blank=True)
-  hero_cta_text = models.CharField(max_length=50, blank=True)
-  hero_cta_link = models.CharField(max_length=120, blank=True)
   calendar_embed_src = models.URLField(blank=True, help_text='Googleカレンダーの埋め込みURL')
+  
+  roadmap_cover_image = models.ImageField(
+      upload_to="roadmap_home/",
+      blank=True,
+      null=True,
+      verbose_name="ロードマップHOMEカバー画像",
+  )
 
   def __str__(self):
     return 'Site Setting'
@@ -98,30 +103,59 @@ class SideHustleItem(models.Model):
         return self.name
 
 class Roadmap(models.Model):
-  name = models.CharField(max_length=50)
-  slug = models.SlugField(unique=True, blank=True)
-  intro = models.TextField(blank=True)
+    # STEP名（例：STEP01 はじめに）
+    name = models.CharField(max_length=50)
+    slug = models.SlugField(unique=True, blank=True, null=False)
 
-  def save(self, *args, **kwargs):
-    if not self.slug:
-      self.slug = slugify(self.name)
-    super().save(*args, **kwargs)
+    # 表示順（STEP01, STEP02... の順番制御用）
+    order = models.PositiveIntegerField(default=1, db_index=True)
 
-  def __str__(self):
-    return self.name
+    # アコーディオン見出し下の短い説明
+    summary = models.CharField(max_length=200, blank=True)
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base = slugify(self.name)
+            self.slug = base or f"roadmap-{self.pk or ''}"
+        super().save(*args, **kwargs)
 
-class Step(models.Model):
-  roadmap = models.ForeignKey(Roadmap, on_delete=models.CASCADE, related_name='steps')
-  order = models.PositiveIntegerField(default=0)
-  title = models.CharField(max_length=120)
-  detail = models.TextField(blank=True)
-  resource_url = models.URLField(blank=True)
+    def __str__(self):
+        return self.name
 
-  class Meta:
-    ordering = ['order']
 
-  def __str__(self):
-    return f"{self.roadmap.name} - {self.order:02d} {self.title}"
+class RoadmapPage(models.Model):
+    roadmap = models.ForeignKey(
+        Roadmap,
+        related_name="pages",
+        on_delete=models.CASCADE
+    )
+    title = models.CharField(max_length=120)
+
+    slug = models.SlugField(blank=True, null=False)
+    order = models.PositiveIntegerField(default=1, db_index=True)
+    
+    cover_image = models.ImageField(
+        upload_to="roadmap_covers/",
+        blank=True,
+        null=True,
+        verbose_name="カバー画像"
+    )
+
+    body = models.TextField(blank=True)
+    is_published = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = ("roadmap", "slug")
+        ordering = ("order", "id")
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base = slugify(self.title)
+            self.slug = base or f"page-{self.pk or ''}"
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.roadmap.name} - {self.title}"
 
 class AITool(models.Model):
   name = models.CharField(max_length=80)

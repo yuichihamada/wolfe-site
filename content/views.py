@@ -1,19 +1,31 @@
 from django.shortcuts import render, get_object_or_404
 from .models import (
   Calendar, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, AITool, HeroImage, News
+  SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage, News
 )
 import secrets
 import unicodedata
 from django.conf import settings
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.db.models import Q
+from django.db.models import Q,  Prefetch
 from django.utils import timezone
 from datetime import timedelta
 from .forms import QuestionForm
 from .models import Question, FaqEntry
+import markdown as md_lib
 
+def render_markdown_with_toc(text: str) -> tuple[str, str]:
+    md = md_lib.Markdown(
+        extensions=["fenced_code", "tables", "toc"],
+        extension_configs={
+            "toc": {"toc_depth": "2-3", "permalink": False}
+        },
+        output_format="html5",
+    )
+    html = md.convert(text or "")
+    toc = md.toc or ""
+    return html, toc
 
 def get_setting():
   return Calendar.objects.first()
@@ -58,13 +70,68 @@ def side_hustle(request):
     }
     return render(request, 'content/side_hustle.html', context)
 
-def roadmap_list(request):
-  roads = Roadmap.objects.all()
-  return render(request, 'content/roadmap_list.html', {'roads': roads})
+def roadmap_home(request):
+    s = get_setting()
+    page_qs = (
+        RoadmapPage.objects
+        .filter(is_published=True)
+        .only("id", "roadmap_id", "title", "slug", "order", "cover_image")
+        .order_by("order", "id")
+    )
+    roads = (
+        Roadmap.objects
+        .all()
+        .order_by("order", "id")
+        .prefetch_related(
+            Prefetch("pages", queryset=page_qs)
+        )
+    )
+    return render(request, "roadmap/home.html", {"roads": roads, "s": s})
 
-def roadmap_detail(request, slug):
-  road = get_object_or_404(Roadmap, slug=slug)
-  return render(request, 'content/roadmap_detail.html', {'road': road})
+def roadmap_page_detail(request, roadmap_slug, page_slug):
+    roadmap = get_object_or_404(Roadmap, slug=roadmap_slug)
+
+    page = get_object_or_404(
+        RoadmapPage,
+        roadmap=roadmap,
+        slug=page_slug,
+        is_published=True,
+    )
+
+    # 同じSTEP内のページ一覧（サイドバーやナビ用）
+    pages = roadmap.pages.filter(is_published=True)
+
+    # 前後ページ（次へ・前へ）
+    prev_page = (
+        pages
+        .filter(order__lt=page.order)
+        .order_by("-order")
+        .first()
+    )
+    next_page = (
+        pages
+        .filter(order__gt=page.order)
+        .order_by("order")
+        .first()
+    )
+    
+    body_html, body_toc = render_markdown_with_toc(page.body)
+    
+    context = {
+        "roadmap": roadmap,
+        "page": page,
+        "pages": pages,
+        "prev_page": prev_page,
+        "next_page": next_page,
+        "body_html": body_html,
+        "body_toc": body_toc,
+    }
+
+    return render(
+        request,
+        "roadmap/page_detail.html",
+        context
+    )
 
 def ai_tools(request):
   tools = AITool.objects.all()

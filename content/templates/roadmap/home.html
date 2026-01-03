@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}ロードマップ - REBIRTH Connect{% endblock %}
+
+{% block content %}
+<section class="max-w-5xl mx-auto px-4 pb-10 space-y-10">
+
+  {% if s.roadmap_cover_image %}
+    <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+      <img
+        src="{{ s.roadmap_cover_image.url }}"
+        alt="ロードマップ"
+        class="w-full h-40 md:h-56 object-cover"
+        loading="lazy"
+      />
+    </div>
+  {% endif %}
+
+  <!-- Header -->
+  <header class="space-y-3">
+    <h1 class="text-2xl md:text-3xl font-bold">ロードマップWiki</h1>
+    <p class="text-gray-600 text-sm md:text-base">
+      この順番で進めればOK。各STEPを開いて、ページを上から読んでいきましょう。
+    </p>
+  </header>
+
+  <!-- Steps (Accordion) -->
+  <div class="bg-white border rounded-2xl overflow-hidden">
+    <div class="p-4 md:p-6 border-b bg-zinc-50/60">
+      <h2 class="font-semibold">STEP一覧</h2>
+    </div>
+
+    <div class="divide-y">
+      {% for road in roads %}
+        <details class="group">
+          <summary class="list-none cursor-pointer select-none px-5 md:px-6 py-4 md:py-5 hover:bg-zinc-50 transition flex items-start gap-4">
+            <!-- Left: order badge -->
+            <div class="shrink-0 mt-0.5">
+              <div class="w-10 h-10 rounded-xl bg-blue-900/10 flex items-center justify-center font-semibold text-blue-900">
+                {{ road.order|stringformat:"02d" }}
+              </div>
+            </div>
+
+            <!-- Middle -->
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2">
+                <h3 class="font-semibold truncate">STEP{{ road.order|stringformat:"02d" }} {{ road.name }}</h3>
+              </div>
+
+              {% if road.summary %}
+                <p class="text-sm text-gray-600 mt-1">{{ road.summary }}</p>
+              {% endif %}
+            </div>
+
+            <!-- Right: chevron -->
+            <div class="shrink-0 mt-2 text-gray-400 group-open:rotate-180 transition">
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </summary>
+
+          <!-- Panel -->
+          <div class="px-5 md:px-6 pb-6">
+            {% with pages=road.pages.all %}
+              {% if pages %}
+                <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                  {% for p in pages %}
+                    <a href="{% url 'roadmap_page_detail' road.slug p.slug %}"
+                      class="group overflow-hidden rounded-2xl border bg-white hover:bg-zinc-50/40 transition">
+                      
+                      {% if p.cover_image %}
+                        <div class="h-28 sm:h-32 w-full overflow-hidden bg-zinc-100">
+                          <img
+                            src="{{ p.cover_image.url }}"
+                            alt="{{ p.title }}"
+                            class="h-full w-full object-cover group-hover:scale-[1.02] transition"
+                            loading="lazy"
+                          />
+                        </div>
+                      {% else %}
+                        <div class="h-28 sm:h-32 w-full bg-zinc-100"></div>
+                      {% endif %}
+
+                      <div class="p-4">
+                        <p class="font-semibold leading-snug line-clamp-2">
+                          {{ p.title }}
+                        </p>
+                        <p class="mt-1 text-sm text-zinc-500">
+                          STEP{{ road.order|stringformat:"02d" }}
+                        </p>
+                      </div>
+                    </a>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <p class="text-sm text-gray-600 mt-2">このSTEPのページは準備中です。</p>
+              {% endif %}
+            {% endwith %}
+          </div>
+        </details>
+      {% empty %}
+        <div class="p-6 text-sm text-gray-600">ロードマップがまだ登録されていません。</div>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+{% endblock %}
