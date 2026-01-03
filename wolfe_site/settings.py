@@ -73,18 +73,26 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 USE_R2 = env.bool("USE_R2", default=False)
 
 if USE_R2:
-    # ==== Cloudflare R2（S3互換） ====
-    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-
     AWS_ACCESS_KEY_ID = env("R2_ACCESS_KEY_ID")
     AWS_SECRET_ACCESS_KEY = env("R2_SECRET_ACCESS_KEY")
     AWS_STORAGE_BUCKET_NAME = env("R2_BUCKET_NAME")
 
+    # API endpoint（アップロード用）
     AWS_S3_ENDPOINT_URL = env("R2_ENDPOINT_URL")
     AWS_S3_REGION_NAME = "auto"
     AWS_S3_ADDRESSING_STYLE = "path"
 
-    MEDIA_URL = env("R2_MEDIA_URL")
+    # 配信用ドメイン（表示用）: https://pub-xxxx.r2.dev/
+    R2_MEDIA_URL = env("R2_MEDIA_URL").rstrip("/")  # 末尾スラッシュ除去
+    AWS_S3_CUSTOM_DOMAIN = R2_MEDIA_URL.replace("https://", "").replace("http://", "")
+
+    AWS_QUERYSTRING_AUTH = False  # 署名付きURLを使わない（公開配信前提）
+
+    STORAGES = {
+        "default": {"BACKEND": "storages.backends.s3boto3.S3Boto3Storage"},
+        "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
+    }
+    MEDIA_URL = R2_MEDIA_URL + "/"
 else:
     # ローカル開発用
     MEDIA_URL = "/media/"
