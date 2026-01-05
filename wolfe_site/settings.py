@@ -23,6 +23,7 @@ INSTALLED_APPS = [
   'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
+  "markdownx",
   'content',
   'storages',
 ]
@@ -97,6 +98,8 @@ else:
     # ローカル開発用
     MEDIA_URL = "/media/"
     MEDIA_ROOT = BASE_DIR / "media"
+
+MARKDOWNX_MEDIA_PATH = "roadmap_md"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

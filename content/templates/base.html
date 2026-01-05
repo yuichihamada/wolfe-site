@@ -11,6 +11,25 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <style>
+    @media (min-width: 768px) {
+      article.prose p:has(> img + img) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 240px);
+        gap: 8px;               /* ← 隙間を詰める（重要） */
+        justify-content: center; /* 全体を中央寄せ */
+        margin: 1.25rem 0;
+      }
+      article.prose p:has(> img + img) > img {
+        width: auto;        /* ← 拡大させない */
+        max-width: 240px;   /* 表示サイズ固定 */
+        height: auto;
+        display: block;
+        margin: 0;
+        border-radius: 10px;
+      }
+    }
+  </style>
 </head>
 <body class="min-h-screen flex flex-col bg-gray-50">
   <header class="bg-white border-b">

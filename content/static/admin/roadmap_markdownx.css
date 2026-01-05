@@ -1,0 +1,43 @@
+/* adminのフォーム領域の上限を外す */
+.change-form .content {
+  max-width: none;
+}
+
+/* Django admin はここで「はみ出し」を隠してることがあるので保険 */
+#content,
+#content-main,
+.change-form form,
+.aligned,
+.aligned .form-row,
+.aligned .form-row > div {
+  overflow: visible;
+}
+
+/* body 行を横いっぱいに使う */
+.field-body,
+.field-body .markdownx,
+.field-body .markdownx textarea,
+.field-body textarea {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* 高さ・見た目（お好みで） */
+.field-body .markdownx textarea,
+.field-body textarea {
+  min-height: 70vh;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.field-body label {
+  width: 120px !important;
+}
+
+/* それでも何かが微妙に横に出た場合は横スクロールで逃がす（最終保険） */
+#content-main {
+  overflow-x: auto;
+}

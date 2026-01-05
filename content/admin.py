@@ -3,6 +3,8 @@ from .models import (
   Calendar, TrainingCategory, TrainingVideo,
   SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage, News, Question, FaqEntry
 )
+from markdownx.widgets import MarkdownxWidget
+from django import forms
 
 @admin.register(Calendar)
 class CalendarAdmin(admin.ModelAdmin):
@@ -63,20 +65,32 @@ class RoadmapAdmin(admin.ModelAdmin):
         RoadmapPageInline,  # ← PDF相当（主役）
     ]
 
+class RoadmapPageAdminForm(forms.ModelForm):
+    class Meta:
+        model = RoadmapPage
+        fields = "__all__"
+        widgets = {
+            "body": MarkdownxWidget(attrs={
+                "rows": 40,
+                "style": (
+                    "font-family: ui-monospace, Menlo, Consolas, monospace;"
+                    "line-height:1.65;"
+                    "font-size:14px;"
+                ),
+            }),
+        }
+
 @admin.register(RoadmapPage)
 class RoadmapPageAdmin(admin.ModelAdmin):
-    list_display = (
-        "title",
-        "roadmap",
-        "order",
-        "is_published",
-    )
+    form = RoadmapPageAdminForm
+
+    list_display = ("title", "roadmap", "order", "is_published")
     list_filter = ("roadmap", "is_published")
     search_fields = ("title", "body")
     ordering = ("roadmap", "order")
 
     prepopulated_fields = {"slug": ("title",)}
-    
+
     fields = (
         "roadmap",
         "order",
@@ -86,6 +100,11 @@ class RoadmapPageAdmin(admin.ModelAdmin):
         "body",
         "is_published",
     )
+    
+    class Media:
+        css = {
+            "all": ("admin/roadmap_markdownx.css",)
+        }
 
 @admin.register(AITool)
 class AIToolAdmin(admin.ModelAdmin):
