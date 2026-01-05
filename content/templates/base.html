@@ -29,6 +29,14 @@
         border-radius: 10px;
       }
     }
+    @media (max-width: 767px) {
+      article.prose p > img {
+        display: block;
+        margin: 0.75rem auto; /* 上下余白＋中央寄せ */
+        max-width: 92%;       /* 画面いっぱいにしすぎない */
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col bg-gray-50">
