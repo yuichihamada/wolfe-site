@@ -19,7 +19,7 @@ def render_markdown_with_toc(text: str) -> tuple[str, str]:
     md = md_lib.Markdown(
         extensions=["fenced_code", "tables", "toc"],
         extension_configs={
-            "toc": {"toc_depth": "2-3", "permalink": False}
+            "toc": {"toc_depth": "2-2", "permalink": False}
         },
         output_format="html5",
     )
