@@ -20,12 +20,12 @@ class QuestionForm(forms.ModelForm):
                 attrs={
                     "class": "w-full border rounded px-2.5 py-2 text-sm",
                     "rows": 6,
-                    "placeholder": "質問・相談・意見・希望など、なんでも自由に書いてください。",
+                    "placeholder": "相談・意見・要望など、なんでも自由に書いてください。",
                 }
             ),
         }
         labels = {
-            "name": "お名前（任意）",
+            "name": "お名前",
             "category": "カテゴリ",
-            "body": "内容（質問・相談・ご意見など）",
+            "body": "内容",
         }
