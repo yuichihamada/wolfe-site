@@ -25,7 +25,6 @@
     {# ▼ PC/タブレット用の丁寧説明 #}
     <p class="hidden md:block text-base text-gray-600 leading-relaxed mb-2">
       WOLFE活動の中での不安や疑問、ちょっとしたモヤモヤ、チームへの要望・意見など、どんなことでも気軽に送れるBOXです。<br>
-      「こんなこと聞いていいのかな？」という内容ほど、実はみんなが知りたいテーマだったりします。
     </p>
 
     {# ▼ スマホ用・補足も一言だけ #}
@@ -62,11 +61,6 @@
             {{ form.name.label }}
           </label>
           {{ form.name }}
-          {% if form.name.help_text %}
-            <p class="text-xs text-gray-500 mt-1">
-              {{ form.name.help_text }}
-            </p>
-          {% endif %}
           {% if form.name.errors %}
             <p class="text-xs text-red-600 mt-1">
               {{ form.name.errors|striptags }}
@@ -85,16 +79,6 @@
               {{ form.category.errors|striptags }}
             </p>
           {% endif %}
-
-          {# スマホ：かなり短く #}
-          <p class="text-xs text-gray-500 mt-1 md:hidden">
-            いちばん近そうなテーマを選んでください。
-          </p>
-
-          {# PC/タブレット：元の説明 #}
-          <p class="hidden md:block text-xs text-gray-500 mt-1">
-            「アポイント」「WOLFE事業知識」「副業コミュニティ」「意見・要望」など、いちばん近そうなものを選んでください。
-          </p>
         </div>
 
         <!-- 内容 -->
@@ -108,32 +92,10 @@
               {{ form.body.errors|striptags }}
             </p>
           {% endif %}
-
-          {# スマホ：一言＋「自由に書いてOK」だけ #}
-          <p class="text-xs text-gray-500 mt-1 md:hidden">
-            書き方に決まりはありません。箇条書きでも大丈夫です。
-          </p>
-
-          {# PC/タブレット：具体的な例文を出す #}
-          <p class="hidden md:block text-xs text-gray-500 mt-1">
-            例：<span class="underline decoration-dotted">最近こういうことで不安を感じています…</span> ／
-            <span class="underline decoration-dotted">アポのこの場面で毎回つまづきます…</span> ／
-            <span class="underline decoration-dotted">こんなコンテンツがあったら嬉しいです！</span>
-          </p>
         </div>
 
-        <!-- 注意書き＋ボタン（スマホ縦 / PC横） -->
+        <!-- ボタン -->
         <div class="flex flex-col gap-3 pt-2 md:flex-row md:items-center md:justify-between">
-          {# スマホ：1文だけにする #}
-          <p class="text-[11px] text-gray-400 leading-relaxed md:hidden">
-            すべてに個別返信はできない場合がありますが、共通するテーマはQ&amp;Aなどで拾っていきます。
-          </p>
-
-          {# PC/タブレット：元の2行説明 #}
-          <p class="hidden md:block text-[11px] text-gray-400 leading-relaxed">
-            全てに個別返信はできない場合がありますが、共通するテーマはQ&amp;Aなどでできるだけ拾っていきます。
-          </p>
-
           <div class="text-right">
             <button
               type="submit"
