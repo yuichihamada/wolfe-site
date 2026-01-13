@@ -43,11 +43,20 @@
             <!-- Middle -->
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2">
-                <h3 class="font-semibold truncate">STEP{{ road.order|stringformat:"02d" }} {{ road.name }}</h3>
+                <h3 class="font-semibold leading-snug">
+                  <span class="block md:inline text-sm md:text-base text-gray-500 md:text-inherit">
+                    STEP{{ road.order|stringformat:"02d" }}
+                  </span>
+                  <span class="block md:inline break-words md:truncate">
+                    {{ road.name }}
+                  </span>
+                </h3>
               </div>
 
               {% if road.summary %}
-                <p class="text-sm text-gray-600 mt-1">{{ road.summary }}</p>
+                <p class="hidden md:block text-sm text-gray-600 mt-1">
+                  {{ road.summary }}
+                </p>
               {% endif %}
             </div>
 
