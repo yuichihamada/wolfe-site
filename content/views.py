@@ -199,11 +199,8 @@ def gate(request):
         if ok:
             request.session['gate_ok'] = True
             request.session['gate_ver'] = settings.GATE_VERSION 
-            # 24時間保持（remember付き）/ ブラウザ閉じたら破棄（rememberなし）
-            if request.POST.get("remember"):
-                request.session.set_expiry(60 * 60 * 24)  # 24h
-            else:
-                request.session.set_expiry(0)
+            # 24時間保持
+            request.session.set_expiry(60 * 60 * 24)  # 24h
             return redirect(request.GET.get("next") or "/")
         else:
             messages.error(request, "パスワードが違います。")
