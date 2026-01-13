@@ -50,48 +50,12 @@
 
       <!-- PCナビ -->
       <nav class="hidden md:flex gap-4 text-sm ml-auto items-center">
-
         <a href="/mission/" class="hover:underline">REBIRTHとは</a>
-
-        <!-- ▼ PC: 研修ドロップダウン（クリックで開閉） -->
-        <div class="relative">
-          <button
-            id="pcTrainingBtn"
-            type="button"
-            class="hover:underline flex items-center gap-1 py-1"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            研修
-            <svg
-              class="w-4 h-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                d="M6 9l6 6 6-6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-
-          <!-- ドロップダウン -->
-          <div
-            id="pcTrainingMenu"
-            class="hidden absolute top-full left-0 bg-white border rounded shadow-md py-2
-                   w-40 text-sm z-50"
-          >
-            <a href="/training/" class="block px-4 py-2 hover:bg-gray-100">研修動画</a>
-            <a href="/roadmap/" class="block px-4 py-2 hover:bg-gray-100">ロードマップ</a>
-            <a href="/ai-tools/" class="block px-4 py-2 hover:bg-gray-100">AIツール</a>
-          </div>
-        </div>
-
+        <a href="/roadmap/" class="hover:underline">ロードマップ</a>
+        <a href="/training/" class="hover:underline">動画一覧</a>
+        <a href="/ai-tools/" class="hover:underline">AIツール</a>
         <a href="/calendar/" class="hover:underline">スケジュール</a>
-        <a href="/news/" class="hover:underline">チーム情報</a>
+        <a href="/news/" class="hover:underline">お知らせ</a>
         <a href="/side-hustle/" class="hover:underline">副業情報</a>
         <a href="/question-box/" class="hover:underline">相談BOX</a>
       </nav>
@@ -120,26 +84,12 @@
                   transition-all duration-200 ease-out">
 
         <nav class="flex flex-col text-sm p-4 space-y-1">
-
           <a href="/mission/" class="block py-2">REBIRTHとは</a>
-
-          <!-- ▼ スマホ: 研修アコーディオン -->
-          <button id="mobileTrainingBtn" class="w-full text-left py-2 flex items-center justify-between">
-            <span>研修</span>
-            <svg id="mobileTrainingIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor">
-              <path d="M5 8l4 4 4-4" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-
-          <!-- 開閉部分 -->
-          <div id="mobileTrainingPanel" class="ml-3 border-l pl-3 space-y-1 hidden">
-            <a href="/training/" class="block py-2">研修動画</a>
-            <a href="/roadmap/" class="block py-2">ロードマップ</a>
-            <a href="/ai-tools/" class="block py-2">AIツール</a>
-          </div>
-
+          <a href="/roadmap/" class="block py-2">ロードマップ</a>
+          <a href="/training/" class="block py-2">動画一覧</a>
+          <a href="/ai-tools/" class="block py-2">AIツール</a>
           <a href="/calendar/" class="block py-2">スケジュール</a>
-          <a href="/news/" class="block py-2">チーム情報</a>
+          <a href="/news/" class="block py-2">お知らせ</a>
           <a href="/side-hustle/" class="block py-2">副業情報</a>
           <a href="/question-box/" class="block py-2">相談BOX</a>
         </nav>
@@ -185,66 +135,6 @@
 
       const mq = window.matchMedia('(min-width: 768px)');
       function sync(e){ if (e.matches) closePanel(); }
-      sync(mq);
-      mq.addEventListener('change', sync);
-    })();
-
-
-    /* --- モバイル: 研修アコーディオン --- */
-    (function () {
-      const btn = document.getElementById('mobileTrainingBtn');
-      const panel = document.getElementById('mobileTrainingPanel');
-      const icon = document.getElementById('mobileTrainingIcon');
-
-      btn?.addEventListener('click', () => {
-        const isOpen = !panel.classList.contains('hidden');
-        if (isOpen) {
-          panel.classList.add('hidden');
-          icon.style.transform = "rotate(0deg)";
-        } else {
-          panel.classList.remove('hidden');
-          icon.style.transform = "rotate(180deg)";
-        }
-      });
-    })();
-
-    /* --- PC: 研修ドロップダウン（クリックで開閉） --- */
-    (function () {
-      const btn = document.getElementById('pcTrainingBtn');
-      const menu = document.getElementById('pcTrainingMenu');
-      if (!btn || !menu) return;
-
-      function openMenu() {
-        menu.classList.remove('hidden');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-
-      function closeMenu() {
-        menu.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();  // 他のクリックイベントに伝播させない
-        const isOpen = !menu.classList.contains('hidden');
-        isOpen ? closeMenu() : openMenu();
-      });
-
-      // メニューの外をクリックしたら閉じる
-      document.addEventListener('click', (e) => {
-        if (menu.classList.contains('hidden')) return;
-        if (!menu.contains(e.target) && e.target !== btn) {
-          closeMenu();
-        }
-      });
-
-      // 画面幅がmd未満になったら強制的に閉じておく（スマホでは別UIを使うため）
-      const mq = window.matchMedia('(max-width: 767px)');
-      function sync(e) {
-        if (e.matches) {
-          closeMenu();
-        }
-      }
       sync(mq);
       mq.addEventListener('change', sync);
     })();
