@@ -88,8 +88,6 @@ class SideHustleItem(models.Model):
     name = models.CharField(max_length=80)
     summary = models.TextField(blank=True)
     reward = models.CharField(max_length=120, blank=True)
-    pros = models.TextField(blank=True)
-    cons = models.TextField(blank=True)
     link_url = models.URLField(blank=True)
 
     image = models.ImageField(

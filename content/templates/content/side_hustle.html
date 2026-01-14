@@ -49,8 +49,8 @@
       <article class="rounded-lg border bg-pink-50 p-4">
         <h3 class="font-semibold text-lg mb-2">お小遣いサポート</h3>
         <p class="text-sm leading-relaxed">
-          紹介型の副業が難しいという方に向けて、誰でも簡単に作業だけすれば
-          お小遣いが貰える高単価案件を厳選しました！！<br>アルバイトをするよりも、
+          紹介型の副業が難しいという方に向けて、<span class="font-semibold">誰でも簡単に作業だけすれば
+          お小遣いが貰える高単価案件を厳選</span>しました！！<br>アルバイトをするよりも、
           自宅で空いた時間に出来るので手離れも良く、すべてのお小遣い案件で
           サポート担当がいるので初めての方も安心して取り組めます。
         </p>
@@ -61,7 +61,7 @@
         <h3 class="font-semibold text-lg mb-2">ビジネスサポート</h3>
         <p class="text-sm leading-relaxed">
           WOLFEのメンバーさんに、よりやり易い環境でビジネスに取り組んでもらうために、
-          信頼できるパートナー企業の商品・サービスを特別価格で提供しています。<br>
+          <span class="font-semibold">信頼できるパートナー企業の商品・サービスを特別価格で提供</span>しています。<br>
           ビジネスにかかる費用を少しでも抑えつつ、更にビジネスが飛躍するサービスを厳選しました。
         </p>
       </article>
@@ -71,7 +71,7 @@
         <h3 class="font-semibold text-lg mb-2">キャリアサポート</h3>
         <p class="text-sm leading-relaxed">
           就職・転職・キャリアアップでお悩みの方を、提携する人材企業を通じて今後のキャリアを
-          サポートします。<br>生活あってこそのWOLFE活動です！<br>WOLFEだけではなく、
+          サポートします。<br><span class="font-semibold">生活あってこそのWOLFE活動です！</span><br>WOLFEだけではなく、
           皆さんの本業の悩みがあれば、一人で悩まずぜひ相談してください。
           WOLFE外のご友人のご紹介も可能です。
         </p>
@@ -82,7 +82,7 @@
         <h3 class="font-semibold text-lg mb-2">ライフサポート（固定費削減）</h3>
         <p class="text-sm leading-relaxed">
           収入を上げることだけが生活を豊かにするわけではありません。
-          毎月支払っている固定費の見直しも、積み重なれば大きな金額になります！<br>
+          <span class="font-semibold">毎月支払っている固定費の見直しも、積み重なれば大きな金額になります！</span><br>
           1万円の固定費削減は1万円の収入UPと同じ。無駄な固定費を減らし、
           WOLFEのビジネス活動やご自身の将来資金に充てていきましょう。
         </p>
@@ -94,8 +94,8 @@
   <section>
     <h2 class="text-2xl font-semibold mb-4">サポート利用ルール</h2>
     <div class="rounded-lg border bg-red-50 p-4 text-sm leading-relaxed space-y-1">
-      <p>1. WOLFE活動をやりやすくするためのサポートのため、<span class="text-red-600 font-semibold">WOLFEに対して頑張っている方を対象</span>にしています。</p>
-      <p>2. 当サポートはチーム内限定のため、WOLFEの非会員はもちろん、WOLFEの他系列の会員など<span class="text-red-600 font-semibold">他言無用</span>でお願いします。</p>
+      <p>1. WOLFE活動をやりやすくするためのサポートのため、<span class="font-semibold">WOLFEに対して頑張っている方を対象</span>にしています。</p>
+      <p>2. 当サポートはチーム内限定のため、WOLFEの非会員はもちろん、WOLFEの他系列の会員など<span class="font-semibold">他言無用</span>でお願いします。</p>
       <p>3. 当サポートは、WOLFEではなく<span class="text-red-600 font-semibold">「チーム内で独自に行っている」</span>ものです。<span class="text-red-600 font-semibold">WOLFEが提供しているサポートではありません。</span></p>
       <p>4. サポートを受けたい場合は、ページ下部の申込フォームより申請してください。</p>
       <p>5. 報酬・支払時期・条件など、資料と異なる場合もあります。</p>
@@ -124,12 +124,6 @@
         {% endif %}
         {% if i.summary %}
           <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
-        {% endif %}
-        {% if i.pros %}
-          <p class="text-xs mb-1"><span class="font-semibold">ポイント：</span><span class="whitespace-pre-line">{{ i.pros }}</span></p>
-        {% endif %}
-        {% if i.cons %}
-          <p class="text-xs text-red-700"><span class="font-semibold">留意点：</span><span class="whitespace-pre-line">{{ i.cons }}</span></p>
         {% endif %}
         {% if i.link_url %}
           <a href="{{ i.link_url }}" target="_blank" rel="noopener"
@@ -165,12 +159,6 @@
         {% if i.summary %}
           <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
         {% endif %}
-        {% if i.pros %}
-          <p class="text-xs mb-1"><span class="font-semibold">ポイント：</span><span class="whitespace-pre-line">{{ i.pros }}</span></p>
-        {% endif %}
-        {% if i.cons %}
-          <p class="text-xs text-red-700"><span class="font-semibold">留意点：</span><span class="whitespace-pre-line">{{ i.cons }}</span></p>
-        {% endif %}
       </article>
       {% endfor %}
     </div>
@@ -198,12 +186,6 @@
         {% endif %}
         {% if i.summary %}
           <p class="text-sm text-gray-800 mb-2 whitespace-pre-line">{{ i.summary }}</p>
-        {% endif %}
-        {% if i.pros %}
-          <p class="text-xs mb-1"><span class="font-semibold">ポイント：</span><span class="whitespace-pre-line">{{ i.pros }}</span></p>
-        {% endif %}
-        {% if i.cons %}
-          <p class="text-xs text-red-700"><span class="font-semibold">留意点：</span><span class="whitespace-pre-line">{{ i.cons }}</span></p>
         {% endif %}
       </article>
       {% endfor %}
