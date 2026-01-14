@@ -26,7 +26,7 @@
     <div class="divide-y">
       {% for road in roads %}
         <details class="group">
-          <summary class="list-none cursor-pointer select-none px-5 md:px-6 py-4 md:py-5 hover:bg-zinc-50 transition flex items-center gap-4">
+          <summary class="list-none cursor-pointer select-none px-4 md:px-6 py-2 md:py-4 hover:bg-zinc-50 transition flex items-center gap-4">
             <!-- Left: order badge -->
             <div class="shrink-0 mt-0.5">
               <div class="w-10 h-10 rounded-xl bg-blue-900/10 flex items-center justify-center font-semibold text-blue-900">
@@ -67,7 +67,7 @@
                       class="group overflow-hidden rounded-2xl border bg-white hover:bg-zinc-50/40 transition">
                       
                       {% if p.cover_image %}
-                        <div class="h-28 sm:h-32 w-full overflow-hidden bg-zinc-100">
+                        <div class="h-20 sm:h-32 w-full overflow-hidden bg-zinc-100">
                           <img
                             src="{{ p.cover_image.url }}"
                             alt="{{ p.title }}"
@@ -76,10 +76,10 @@
                           />
                         </div>
                       {% else %}
-                        <div class="h-28 sm:h-32 w-full bg-zinc-100"></div>
+                        <div class="h-20 sm:h-32 w-full bg-zinc-100"></div>
                       {% endif %}
 
-                      <div class="p-4">
+                      <div class="p-3 sm:p-4">
                         <p class="font-semibold leading-snug line-clamp-2">
                           {{ p.title }}
                         </p>
