@@ -29,7 +29,7 @@
     <div class="divide-y">
       {% for road in roads %}
         <details class="group">
-          <summary class="list-none cursor-pointer select-none px-5 md:px-6 py-4 md:py-5 hover:bg-zinc-50 transition flex items-start gap-4">
+          <summary class="list-none cursor-pointer select-none px-5 md:px-6 py-4 md:py-5 hover:bg-zinc-50 transition flex items-center gap-4">
             <!-- Left: order badge -->
             <div class="shrink-0 mt-0.5">
               <div class="w-10 h-10 rounded-xl bg-blue-900/10 flex items-center justify-center font-semibold text-blue-900">
@@ -44,18 +44,12 @@
             <!-- Middle -->
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2">
-                <h3 class="font-semibold leading-snug">
-                  <span class="block md:inline break-words md:truncate">
+                <h3 class="font-semibold text-base md:text-lg leading-tight">
+                  <span class="block break-words">
                     {{ road.name }}
                   </span>
                 </h3>
               </div>
-
-              {% if road.summary %}
-                <p class="hidden md:block text-sm text-gray-600 mt-1">
-                  {{ road.summary }}
-                </p>
-              {% endif %}
             </div>
 
             <!-- Right: chevron -->
@@ -91,9 +85,6 @@
                       <div class="p-4">
                         <p class="font-semibold leading-snug line-clamp-2">
                           {{ p.title }}
-                        </p>
-                        <p class="mt-1 text-sm text-zinc-500">
-                          STEP{{ road.order|stringformat:"02d" }}
                         </p>
                       </div>
                     </a>
