@@ -45,13 +45,6 @@
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2">
                 <h3 class="font-semibold leading-snug">
-                  <span class="block md:inline text-sm md:text-base text-gray-500 md:text-inherit md:mr-2">
-                    {% if road.kind == "extra" %}
-                      EXTRA
-                    {% else %}
-                      STEP{{ road.order|step_num }}
-                    {% endif %}
-                  </span>
                   <span class="block md:inline break-words md:truncate">
                     {{ road.name }}
                   </span>
