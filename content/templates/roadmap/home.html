@@ -33,7 +33,11 @@
             <!-- Left: order badge -->
             <div class="shrink-0 mt-0.5">
               <div class="w-10 h-10 rounded-xl bg-blue-900/10 flex items-center justify-center font-semibold text-blue-900">
-                {{ road.order|step_num }}
+                {% if road.kind == "extra" %}
+                  EXTRA
+                {% else %}
+                  {{ road.order|step_num }}
+                {% endif %}
               </div>
             </div>
 
@@ -42,7 +46,11 @@
               <div class="flex items-center gap-2">
                 <h3 class="font-semibold leading-snug">
                   <span class="block md:inline text-sm md:text-base text-gray-500 md:text-inherit md:mr-2">
-                    STEP{{ road.order|step_num }}
+                    {% if road.kind == "extra" %}
+                      EXTRA
+                    {% else %}
+                      STEP{{ road.order|step_num }}
+                    {% endif %}
                   </span>
                   <span class="block md:inline break-words md:truncate">
                     {{ road.name }}

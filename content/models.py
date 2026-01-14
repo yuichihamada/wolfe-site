@@ -103,12 +103,17 @@ class SideHustleItem(models.Model):
         return self.name
 
 class Roadmap(models.Model):
-    # STEP名（例：STEP01 はじめに）
+    class Kind(models.TextChoices):
+        STEP = "step", "STEP"
+        EXTRA = "extra", "EXTRA"
+    
     name = models.CharField(max_length=50)
     slug = models.SlugField(unique=True, blank=True, null=False)
 
     # 表示順（STEP1, STEP2... の順番制御用）
     order = models.DecimalField(max_digits=4, decimal_places=1, default=1, db_index=True)
+    
+    kind = models.CharField(max_length=10, choices=Kind.choices, default=Kind.STEP, db_index=True)
 
     # アコーディオン見出し下の短い説明
     summary = models.CharField(max_length=200, blank=True)

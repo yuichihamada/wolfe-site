@@ -47,14 +47,14 @@ class RoadmapPageInline(admin.TabularInline):
 
 @admin.register(Roadmap)
 class RoadmapAdmin(admin.ModelAdmin):
-    list_display = ("order", "name")
+    list_display = ("order", "kind", "name")
     ordering = ("order",)
     prepopulated_fields = {"slug": ("name",)}
     search_fields = ("name", "summary")
 
     fieldsets = (
         ("基本情報（STEP）", {
-            "fields": ("order", "name", "slug"),
+            "fields": ("kind", "order", "name", "slug"),
         }),
         ("説明", {
             "fields": ("summary",),
