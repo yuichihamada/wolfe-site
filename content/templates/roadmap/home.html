@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load roadmap_extras %}
 {% block title %}ロードマップ - REBIRTH Connect{% endblock %}
 
 {% block content %}
@@ -25,10 +26,6 @@
 
   <!-- Steps (Accordion) -->
   <div class="bg-white border rounded-2xl overflow-hidden">
-    <div class="p-4 md:p-6 border-b bg-zinc-50/60">
-      <h2 class="font-semibold">STEP一覧</h2>
-    </div>
-
     <div class="divide-y">
       {% for road in roads %}
         <details class="group">
@@ -36,7 +33,7 @@
             <!-- Left: order badge -->
             <div class="shrink-0 mt-0.5">
               <div class="w-10 h-10 rounded-xl bg-blue-900/10 flex items-center justify-center font-semibold text-blue-900">
-                {{ road.order|stringformat:"02d" }}
+                {{ road.order|step_num }}
               </div>
             </div>
 
@@ -44,8 +41,8 @@
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2">
                 <h3 class="font-semibold leading-snug">
-                  <span class="block md:inline text-sm md:text-base text-gray-500 md:text-inherit">
-                    STEP{{ road.order|stringformat:"02d" }}
+                  <span class="block md:inline text-sm md:text-base text-gray-500 md:text-inherit md:mr-2">
+                    STEP{{ road.order|step_num }}
                   </span>
                   <span class="block md:inline break-words md:truncate">
                     {{ road.name }}
