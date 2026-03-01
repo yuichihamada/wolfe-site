@@ -26,7 +26,18 @@ INSTALLED_APPS = [
   "markdownx",
   'content',
   'storages',
+  'rest_framework',
+  'rest_framework.authtoken',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
 
 MIDDLEWARE = [
   'django.middleware.security.SecurityMiddleware',
@@ -114,6 +125,7 @@ ACCESS_GATE_EXEMPT_URLS = [
     r'^/favicon\.ico$',    # favicon
     r'^/robots\.txt$',     # 任意
     r'^/admin/',           # AdminはDjangoのログインに任せる（必要に応じて外してもOK）
+    r'^/api/',             # APIはToken認証で保護するためゲート除外
 ]
 
 # 「覚えておく」期間（24時間）

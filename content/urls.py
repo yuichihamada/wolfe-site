@@ -1,7 +1,9 @@
 from django.urls import path
 from . import views
+from .api_views import PageUpsertView
 
 urlpatterns = [
+  path("api/pages/", PageUpsertView.as_view(), name="api_page_upsert"),
   path('', views.home, name='home'),
   path('mission/', views.mission, name='mission'),
   path('training/', views.training_list, name='training_list'),
