@@ -14,8 +14,8 @@ import pathlib
 import requests
 
 # ===== 設定（後から変更する箇所) =====
-API_URL = "https://your-domain.com/api/pages/"  # ← デプロイ後に変更
-TOKEN = "your-token-here"                         # ← トークン発行後に変更
+API_URL = "https://www.rebirth-connect.com/api/pages/"
+TOKEN = "2bd2386e36864c49a3e315ce215ccd2f9fd06ea1"
 # ======================================
 
 ARTICLES_DIR = pathlib.Path(
