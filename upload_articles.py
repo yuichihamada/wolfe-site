@@ -12,6 +12,7 @@
 
 import pathlib
 import re
+import unicodedata
 import requests
 
 # ===== 設定（後から変更する箇所) =====
@@ -45,6 +46,8 @@ def upload():
         #     "STEP3.5 事業に確信を持つ" → "事業に確信を持つ"
         #     "extra 番外編" → "番外編"
         roadmap_name = re.sub(r'^(STEP\d+(?:\.\d+)?\s+|extra\s+)', '', step_dir.name)
+        # macOS はフォルダ名を NFD で保存するため NFC に正規化して DB と一致させる
+        roadmap_name = unicodedata.normalize('NFC', roadmap_name)
         print(f"\n--- {roadmap_name} ---")
 
         for md_file in sorted(step_dir.glob("*.md")):

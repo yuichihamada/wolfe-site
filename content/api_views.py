@@ -61,6 +61,11 @@ class PageUpsertView(APIView):
                 "title": data["title"],
                 "body": data["body"],
             },
+            create_defaults={
+                # 日本語タイトルは slugify が空文字になりスラグ衝突が起きるため
+                # 新規作成時のみ order ベースのスラグを明示的に設定する
+                "slug": f"p{data['order']}",
+            },
         )
 
         return Response(
