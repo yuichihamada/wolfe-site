@@ -1,3 +1,5 @@
+import re
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
@@ -8,20 +10,31 @@ from .models import Roadmap, RoadmapPage
 from .serializers import RoadmapPageUpsertSerializer
 
 
+def _get_roadmap(name: str) -> Roadmap | None:
+    """
+    nameでRoadmapを取得。存在しない場合は None を返す。
+    フォルダ名の "STEP1 " 等のプレフィックスは upload_articles.py 側で除去済み。
+    """
+    try:
+        return Roadmap.objects.get(name=name)
+    except Roadmap.DoesNotExist:
+        return None
+
+
 class PageUpsertView(APIView):
     """
     ロードマップ記事の作成・更新 API
 
     POST /api/pages/
     {
-        "roadmap_name": "STEP1 スタートアップ",
+        "roadmap_name": "スタートアップ",
         "title": "最初に",
         "order": 1,
         "body": "Markdown本文..."
     }
 
+    - roadmap_name は DB 上の Roadmap.name と完全一致させること（自動作成しない）
     - 同じ roadmap × order の記事が存在する場合は上書き更新
-    - 存在しない場合は新規作成
     - 認証: Authorization: Token <token>
     """
 
@@ -34,12 +47,10 @@ class PageUpsertView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         data = serializer.validated_data
-
-        try:
-            roadmap = Roadmap.objects.get(name=data["roadmap_name"])
-        except Roadmap.DoesNotExist:
+        roadmap = _get_roadmap(data["roadmap_name"])
+        if roadmap is None:
             return Response(
-                {"error": f"Roadmap '{data['roadmap_name']}' が見つかりません。Django admin でまず Roadmap を作成してください。"},
+                {"roadmap_name": f"Roadmap '{data['roadmap_name']}' が見つかりません。"},
                 status=status.HTTP_404_NOT_FOUND,
             )
 

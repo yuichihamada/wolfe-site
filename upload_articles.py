@@ -11,6 +11,7 @@
 """
 
 import pathlib
+import re
 import requests
 
 # ===== 設定（後から変更する箇所) =====
@@ -39,7 +40,11 @@ def upload():
         if not step_dir.is_dir():
             continue
 
-        roadmap_name = step_dir.name  # 例: "STEP1 スタートアップ"
+        # フォルダ名から "STEP1 ", "STEP3.5 ", "extra " などのプレフィックスを除去
+        # 例: "STEP1 スタートアップ" → "スタートアップ"
+        #     "STEP3.5 事業に確信を持つ" → "事業に確信を持つ"
+        #     "extra 番外編" → "番外編"
+        roadmap_name = re.sub(r'^(STEP\d+(?:\.\d+)?\s+|extra\s+)', '', step_dir.name)
         print(f"\n--- {roadmap_name} ---")
 
         for md_file in sorted(step_dir.glob("*.md")):
