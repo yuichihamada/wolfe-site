@@ -10,8 +10,7 @@ urlpatterns = [
   path('side-hustle/', views.side_hustle, name='side_hustle'),
   path("roadmap/", views.roadmap_home, name="roadmap_home"),
   path("roadmap/<slug:roadmap_slug>/<slug:page_slug>/", views.roadmap_page_detail, name="roadmap_page_detail"),
-  path('ai-tools/', views.ai_tools, name='ai_tools'),
-  path('calendar/', views.calendar, name='calendar'),
+path('calendar/', views.calendar, name='calendar'),
   path('gate/', views.gate, name='gate'),
   path('gate/logout/', views.gate_logout, name='gate_logout'),
 ]

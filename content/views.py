@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import (
   Calendar, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage
+  SideHustleItem, Roadmap, RoadmapPage, HeroImage
 )
 import secrets
 import unicodedata
@@ -130,10 +130,6 @@ def roadmap_page_detail(request, roadmap_slug, page_slug):
         "roadmap/page_detail.html",
         context
     )
-
-def ai_tools(request):
-  tools = AITool.objects.all()
-  return render(request, 'content/ai_tools.html', {'tools': tools})
 
 def calendar(request):
   s = get_setting()
