@@ -51,7 +51,7 @@
              class="group overflow-hidden rounded-2xl border bg-white hover:bg-zinc-50/40 transition">
 
             {% if prev_page.cover_image %}
-              <div class="h-28 sm:h-32 w-full overflow-hidden bg-zinc-100">
+              <div class="hidden md:block h-32 w-full overflow-hidden bg-zinc-100">
                 <img
                   src="{{ prev_page.cover_image.url }}"
                   alt="{{ prev_page.title }}"
@@ -60,7 +60,7 @@
                 />
               </div>
             {% else %}
-              <div class="h-28 sm:h-32 w-full bg-zinc-100"></div>
+              <div class="hidden md:block h-32 w-full bg-zinc-100"></div>
             {% endif %}
 
             <div class="p-4">
@@ -82,7 +82,7 @@
              class="group overflow-hidden rounded-2xl border bg-white hover:bg-zinc-50/40 transition">
 
             {% if next_page.cover_image %}
-              <div class="h-28 sm:h-32 w-full overflow-hidden bg-zinc-100">
+              <div class="hidden md:block h-32 w-full overflow-hidden bg-zinc-100">
                 <img
                   src="{{ next_page.cover_image.url }}"
                   alt="{{ next_page.title }}"
@@ -91,7 +91,7 @@
                 />
               </div>
             {% else %}
-              <div class="h-28 sm:h-32 w-full bg-zinc-100"></div>
+              <div class="hidden md:block h-32 w-full bg-zinc-100"></div>
             {% endif %}
 
             <div class="p-4">
