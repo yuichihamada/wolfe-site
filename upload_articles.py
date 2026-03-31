@@ -21,8 +21,7 @@ TOKEN = "2bd2386e36864c49a3e315ce215ccd2f9fd06ea1"
 # ======================================
 
 ARTICLES_DIR = pathlib.Path(
-    "/Users/hamadayuichi/Desktop/WOLFE/マネジメント用"
-    "/REBIRTH Connect ロードマップ/ロードマップ 記事/existing-articles"
+    "/Users/hamadayuichi/dev/workspace/wolfe-site/articles/existing-articles"
 )
 
 headers = {"Authorization": f"Token {TOKEN}"}
