@@ -2,6 +2,17 @@ import re
 from django.conf import settings
 from django.shortcuts import redirect
 
+
+class NoIndexMiddleware:
+  """全レスポンスに X-Robots-Tag: noindex を付与して検索エンジンのインデックスを防ぐ。"""
+  def __init__(self, get_response):
+    self.get_response = get_response
+
+  def __call__(self, request):
+    response = self.get_response(request)
+    response['X-Robots-Tag'] = 'noindex, nofollow'
+    return response
+
 class AccessGateMiddleware:
   """
   共通パスワードのゲート。セッションに 'gate_ok' がない限り、
