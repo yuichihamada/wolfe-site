@@ -46,7 +46,7 @@ def mission(request):
   return render(request, 'content/mission.html', {'blocks': blocks})
 
 def training_list(request):
-  qs = TrainingVideo.objects.filter(is_public=True)
+  qs = TrainingVideo.objects.filter(is_public=True).order_by('-id')
   categories = TrainingCategory.objects.all()
   c = request.GET.get('category')
   if c:
