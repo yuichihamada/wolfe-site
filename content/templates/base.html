@@ -6,12 +6,17 @@
   <title>{% block title %}REBIRTH Connect{% endblock %}</title>
   <meta name="description" content="REBIRTH 教育・研修サイト">
   <link rel="icon" href="data:,">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <style>
+    /* ─── Base ─── */
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-feature-settings: "palt";
+    }
+
     /* ─── Animations ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(12px); }
@@ -69,10 +74,10 @@
 
       <!-- PCナビ -->
       <nav class="hidden md:flex gap-4 text-sm ml-auto items-center">
-        <a href="/mission/" class="hover:underline">REBIRTHとは</a>
-        <a href="/roadmap/" class="hover:underline">ロードマップ</a>
-        <a href="/training/" class="hover:underline">研修動画</a>
-        <a href="/calendar/" class="hover:underline">スケジュール</a>
+        <a href="/mission/" class="hover:underline tracking-wide">REBIRTHとは</a>
+        <a href="/roadmap/" class="hover:underline tracking-wide">ロードマップ</a>
+        <a href="/training/" class="hover:underline tracking-wide">研修動画</a>
+        <a href="/calendar/" class="hover:underline tracking-wide">スケジュール</a>
       </nav>
 
       <!-- ▼ ハンバーガー -->
@@ -113,10 +118,6 @@
   <footer class="bg-gray-100 text-center text-xs py-6 text-gray-600">
     © {{ now|default:"" }} REBIRTH Connect. All rights reserved.
   </footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1rI7MiKdZyf/q0fN9Eu0mQF0tzm+qepkG5hU"
-          crossorigin="anonymous"></script>
   
   <script>
     /* --- モバイル メインメニューの制御 --- */
