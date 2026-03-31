@@ -12,6 +12,25 @@
         crossorigin="anonymous">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <style>
+    /* ─── Animations ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.5s cubic-bezier(0.4,0,0.2,1) both;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.45s cubic-bezier(0.4,0,0.2,1),
+                  transform 0.45s cubic-bezier(0.4,0,0.2,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     @media (min-width: 768px) {
       article.prose p:has(> img + img) {
         display: grid;
@@ -132,5 +151,19 @@
     })();
   </script>
 
+  <script>
+    /* ─── Scroll Reveal ─── */
+    (function(){
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    })();
+  </script>
 </body>
 </html>

@@ -24,7 +24,7 @@
   </nav>
 
   <!-- タイトル -->
-  <header class="space-y-3 relative z-10 mt-4">
+  <header class="space-y-3 relative z-10 mt-4 fade-up" style="animation-delay:0.1s">
     <h1 class="text-2xl md:text-3xl font-bold">{{ page.title }}</h1>
   </header>
 
@@ -38,13 +38,13 @@
   {% endif %}
 
   <!-- 本文 -->
-  <article class="prose max-w-none">
+  <article class="prose max-w-none reveal">
     {{ body_html|safe }}
   </article>
 
   <!-- 次に読む -->
   {% if prev_page or next_page %}
-    <section class="pt-10 border-t">
+    <section class="pt-10 border-t reveal">
       <div class="grid gap-4 sm:grid-cols-2">
         {% if prev_page %}
           <a href="{% url 'roadmap_page_detail' roadmap.slug prev_page.slug %}"

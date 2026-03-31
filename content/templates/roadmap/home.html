@@ -17,7 +17,7 @@
   {% endif %}
 
   <!-- Header -->
-  <header class="space-y-3">
+  <header class="space-y-3 fade-up" style="animation-delay:0.1s">
     <h1 class="text-2xl md:text-3xl font-bold">WOLFE 成功へのロードマップ</h1>
     <p class="text-gray-600 text-sm md:text-base">
       WOLFE活動を進めるためのロードマップです。順番に進めていきましょう！
@@ -28,7 +28,7 @@
   <div class="bg-white border rounded-2xl overflow-hidden">
     <div class="divide-y">
       {% for road in roads %}
-        <details class="group">
+        <details class="group reveal">
           <summary class="list-none cursor-pointer select-none px-4 md:px-6 py-2 md:py-4 hover:bg-zinc-50 transition flex items-center gap-4">
             <!-- Left: order badge -->
             <div class="shrink-0 mt-0.5">
