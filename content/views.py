@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import (
   Calendar, MissionBlock, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, RoadmapPage, HeroImage
+  Roadmap, RoadmapPage, HeroImage
 )
 import secrets
 import unicodedata
@@ -57,16 +57,6 @@ def training_list(request):
     'current': c or '',
   })
 
-def side_hustle(request):
-    qs = SideHustleItem.objects.all().order_by('id')
-
-    context = {
-        'pocket_items': qs.filter(category='pocket'),
-        'career_items': qs.filter(category='career'),
-        'life_items': qs.filter(category='life'),
-        'other_items': qs.filter(category='other'),
-    }
-    return render(request, 'content/side_hustle.html', context)
 
 def roadmap_home(request):
     s = get_setting()

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
   Calendar, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage
+  Roadmap, RoadmapPage, AITool, HeroImage
 )
 from markdownx.widgets import MarkdownxWidget
 from django import forms
@@ -26,9 +26,6 @@ class TrainingVideoAdmin(admin.ModelAdmin):
   list_filter = ("category", "is_public")
   search_fields = ("title", "description")
 
-@admin.register(SideHustleItem)
-class SideHustleItemAdmin(admin.ModelAdmin):
-  list_display = ("name", "link_url")
 
 class RoadmapPageInline(admin.TabularInline):
     model = RoadmapPage

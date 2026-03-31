@@ -70,33 +70,6 @@ class TrainingVideo(models.Model):
     return self.title
 
 
-class SideHustleItem(models.Model):
-    CATEGORY_CHOICES = [
-        ('pocket', 'お小遣い案件'),
-        ('career', 'キャリア支援'),
-        ('life', '固定費削減'),
-        ('other', 'その他'),
-    ]
-
-    category = models.CharField(
-        max_length=20,
-        choices=CATEGORY_CHOICES,
-        default='pocket'
-    )
-    name = models.CharField(max_length=80)
-    summary = models.TextField(blank=True)
-    reward = models.CharField(max_length=120, blank=True)
-    link_url = models.URLField(blank=True)
-
-    image = models.ImageField(
-        upload_to='side_hustle/',
-        blank=True,
-        null=True,
-        verbose_name='イメージ画像'
-    )
-
-    def __str__(self):
-        return self.name
 
 class Roadmap(models.Model):
     class Kind(models.TextChoices):

@@ -7,7 +7,6 @@ urlpatterns = [
   path('', views.home, name='home'),
   path('mission/', views.mission, name='mission'),
   path('training/', views.training_list, name='training_list'),
-  path('side-hustle/', views.side_hustle, name='side_hustle'),
   path("roadmap/", views.roadmap_home, name="roadmap_home"),
   path("roadmap/<slug:roadmap_slug>/<slug:page_slug>/", views.roadmap_page_detail, name="roadmap_page_detail"),
 path('calendar/', views.calendar, name='calendar'),
