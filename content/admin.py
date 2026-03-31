@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
   Calendar, TrainingCategory, TrainingVideo,
-  SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage, News, Question, FaqEntry
+  SideHustleItem, Roadmap, RoadmapPage, AITool, HeroImage, News
 )
 from markdownx.widgets import MarkdownxWidget
 from django import forms
@@ -127,32 +127,3 @@ class NewsAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
 
-@admin.register(Question)
-class QuestionAdmin(admin.ModelAdmin):
-    list_display = ("display_name", "category", "short_body", "status", "faq_entry", "created_at")
-    list_filter = ("category", "status", "created_at", "faq_entry")
-    search_fields = ("name", "body")
-    readonly_fields = ("created_at",)
-
-    fieldsets = (
-        ("投稿内容", {
-            "fields": ("name", "category", "body"),
-        }),
-        ("対応状況", {
-            "fields": ("status", "faq_entry"),
-        }),
-        ("メタ情報", {
-            "fields": ("created_at",),
-        }),
-    )
-
-    def short_body(self, obj):
-        return (obj.body[:40] + "…") if len(obj.body) > 40 else obj.body
-    short_body.short_description = "内容（抜粋）"
-
-
-@admin.register(FaqEntry)
-class FaqEntryAdmin(admin.ModelAdmin):
-    list_display = ("question_text", "category", "is_published", "created_at")
-    list_filter = ("category", "is_published", "created_at")
-    search_fields = ("question_text", "answer")
