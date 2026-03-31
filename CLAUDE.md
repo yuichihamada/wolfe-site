@@ -54,9 +54,3 @@ python3 upload_articles.py
 **ファイルの命名規則:**
 `01_最初に.md` のように `連番_タイトル.md` の形式にする。連番が order になる。
 
-**DB バックアップ（アップロード前に取ること）:**
-```
-cd /Users/hamadayuichi/dev/workspace/wolfe-site
-python3 backup_db.py
-```
-→ `backup_roadmap_pages.json` が生成される。
