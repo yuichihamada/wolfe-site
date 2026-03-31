@@ -12,8 +12,21 @@
 
   {% if s and s.calendar_embed_src %}
     <div class="rounded-lg overflow-hidden shadow bg-white">
-      
-      <div class="h-[78vh]">
+
+      {# スマホ：縮小表示で月全体をコンパクトに #}
+      <div class="md:hidden h-[60vh] overflow-hidden">
+        <div style="transform: scale(0.65); transform-origin: top left; width: 154%; height: 92vh;">
+          <iframe
+            src="{{ s.calendar_embed_src }}&mode=MONTH&showTabs=1&showTitle=0&showPrint=0&showCalendars=0"
+            class="w-full h-full border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      {# PC：通常表示 #}
+      <div class="hidden md:block h-[78vh]">
         <iframe
           src="{{ s.calendar_embed_src }}&mode=MONTH&showTabs=1&showTitle=0&showPrint=0&showCalendars=0"
           class="w-full h-full border-0"
