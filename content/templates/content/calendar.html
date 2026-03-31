@@ -13,18 +13,7 @@
   {% if s and s.calendar_embed_src %}
     <div class="rounded-lg overflow-hidden shadow bg-white">
       
-      {# モバイル：リスト表示 #}
-      <div class="md:hidden h-[70vh]">
-        <iframe
-          src="{{ s.calendar_embed_src }}&mode=AGENDA&showTabs=0&showTitle=0&showPrint=0&showCalendars=0"
-          class="w-full h-full border-0"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-      {# PC/タブレット：月表示 #}
-      <div class="hidden md:block h-[78vh]">
+      <div class="h-[78vh]">
         <iframe
           src="{{ s.calendar_embed_src }}&mode=MONTH&showTabs=1&showTitle=0&showPrint=0&showCalendars=0"
           class="w-full h-full border-0"
