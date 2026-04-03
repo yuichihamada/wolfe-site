@@ -129,6 +129,6 @@ ACCESS_GATE_EXEMPT_URLS = [
     r'^/api/',             # APIはToken認証で保護するためゲート除外
 ]
 
-# 「覚えておく」期間（24時間）
+# 「覚えておく」期間（実質無期限: 10年）
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
-SESSION_COOKIE_AGE = 60 * 60 * 24
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 365 * 10
